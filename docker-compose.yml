@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+  db:
+    image: mariadb:11
+    container_name: mariadb-am
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: rootpass
+      MARIADB_DATABASE: wpdb
+      MARIADB_USER: wpuser
+      MARIADB_PASSWORD: wppass
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:php8.2-apache
+    container_name: wordpress-am
+    depends_on:
+      - db           # без проверки health
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppass
+      WORDPRESS_DB_NAME: wpdb
+      WORDPRESS_DEBUG: "1"
+      WP_DEBUG_LOG: "1"
+      WP_DEBUG_DISPLAY: "0"
+    volumes:
+      - ./wordpress:/var/www/html
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin-am
+    depends_on:
+      - db
+    restart: unless-stopped
+    environment:
+      PMA_HOST: db
+      PMA_USER: wpuser
+      PMA_PASSWORD: wppass
+    ports:
+      - "8081:80"
+
+volumes:
+  db_data:
