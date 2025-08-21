@@ -1,0 +1,31 @@
+/* Базовая раскладка */
+.swiper{ position:relative; overflow:hidden; border-radius: 24px;}
+.swiper-wrapper{ display:flex; will-change:transform; }
+.swiper-slide{ position:relative; flex:0 0 100%; max-width:100%; }
+
+/* Индикатор прогресса внизу активного */
+.swiper-progress{
+  position:absolute; left:0; bottom:0;
+  height:3px; width:0;
+  background:#fff;              /* цвет полоски */
+  transition:width linear;
+}
+
+/* Пагинация-линейки */
+.swiper .swiper-pagination{
+  position:absolute; left:50%; bottom:18px;
+  transform:translateX(-50%);
+  display:flex; gap:10px; z-index:5;
+}
+.swiper-line-bullet{
+  width:40px; height:3px;
+  border:none; padding:0; margin:0;
+  border-radius:2px;
+  background:rgba(255,255,255,.35);
+  cursor:pointer;
+  transition:background .25s ease, transform .25s ease;
+}
+.swiper-line-bullet.is-active{
+  background:#fff;
+  transform:scaleY(1.15);
+}
