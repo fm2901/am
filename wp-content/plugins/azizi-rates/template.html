@@ -1,0 +1,52 @@
+<section class="sl-section cw-widget" id="cw-widget">
+    <div class="_header_1fhxe_21 cw-header">
+        <h2 class="_title_1fhxe_48">Курс валют</h2>
+        <div class="cw-controls">
+            <button class="sl-button sl-white cw-mode" id="cw-mode-btn" type="button" aria-expanded="false">
+                <span id="cw-mode-label">По картам</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6.5L8 10.5L12 6.5" fill="currentColor"/></svg>
+            </button>
+            <div class="cw-menu" id="cw-menu" role="menu" aria-hidden="true">
+                <button class="cw-menu-item" data-mode="nbt" role="menuitem">НБТ</button>
+                <button class="cw-menu-item" data-mode="card" role="menuitem">По картам</button>
+                <button class="cw-menu-item" data-mode="mt" role="menuitem">Денежных переводов</button>
+                <button class="cw-menu-item" data-mode="beznal" role="menuitem">Безналичными</button>
+                <button class="cw-menu-item" data-mode="kassa" role="menuitem">В кассе</button>
+            </div>
+            <div class="cw-date" id="cw-date">—</div>
+        </div>
+    </div>
+
+    <div class="cw-grid">
+        <!-- Таблица курсов -->
+        <div class="cw-card">
+            <table class="cw-table" aria-describedby="cw-mode-label">
+                <thead>
+                <tr>
+                    <th>ВАЛЮТА</th>
+                    <th>ПОКУПКА</th>
+                    <th>ПРОДАЖА</th>
+                </tr>
+                </thead>
+                <tbody id="cw-body">
+                <tr class="cw-row"><td colspan="3" class="cw-empty">Загрузка…</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Конвертер -->
+        <div class="cw-card cw-converter">
+            <div class="cw-conv-title">Конвертер валют</div>
+            <div class="cw-conv-row">
+                <input id="cw-amount" class="cw-input" type="number" min="0" step="0.01" value="100" aria-label="Сумма">
+                <select id="cw-currency" class="cw-select" aria-label="Валюта">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="rub">RUB</option>
+                </select>
+            </div>
+            <div class="cw-conv-result">= <span id="cw-result">—</span> <span class="cw-tjs">TJS</span></div>
+            <div class="cw-note">Конвертация выполняется по курсу <span id="cw-note-mode">по картам</span> (по колонке «Покупка»).</div>
+        </div>
+    </div>
+</section>

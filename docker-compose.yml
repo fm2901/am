@@ -30,7 +30,7 @@ services:
       WP_DEBUG_LOG: "1"
       WP_DEBUG_DISPLAY: "0"
     volumes:
-      - ./wordpress:/var/www/html
+      - ./:/var/www/html
 
   phpmyadmin:
     image: phpmyadmin:latest

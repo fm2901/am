@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: azizi-news 1.0\n"
+"Language: ru_RU\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: shortcode-news.php
+msgid "Новости компании"
+msgstr "Новости компании"
+
+#: shortcode-news.php
+msgid "Все новости"
+msgstr "Все новости"
+
+#: shortcode-news.php
+msgid "Новостей пока нет"
+msgstr "Новостей пока нет"

@@ -1,0 +1,43 @@
+/*.news-section {*/
+/*    padding: 2rem 0;*/
+/*}*/
+
+/*.news-header {*/
+/*    margin-bottom: 1rem;*/
+/*}*/
+
+/*.news-title {*/
+/*    font-size: 1.5rem;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.news-list {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    gap: 1.5rem;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.news-list li {*/
+/*    flex: 1;*/
+/*}*/
+
+/*.news-link {*/
+/*    display: block;*/
+/*    text-decoration: none;*/
+/*    color: inherit;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.news-title-item {*/
+/*    margin: .5rem 0;*/
+/*    font-weight: 600;*/
+/*}*/
+
+/*.news-thumb {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    border-radius: 8px;*/
+/*    display: block;*/
+/*}*/

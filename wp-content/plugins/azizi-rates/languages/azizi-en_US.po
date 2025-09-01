@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Azizi Rates Widget\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Курс валют"
+msgstr "Exchange Rates"
+
+msgid "По картам"
+msgstr "By Cards"
+
+msgid "Денежных переводов"
+msgstr "Money Transfers"
+
+msgid "Безналичными"
+msgstr "Cashless"
+
+msgid "В кассе"
+msgstr "At Cash Desk"
+
+msgid "ВАЛЮТА"
+msgstr "CURRENCY"
+
+msgid "ПОКУПКА"
+msgstr "BUY"
+
+msgid "ПРОДАЖА"
+msgstr "SELL"
+
+msgid "Конвертер валют"
+msgstr "Currency Converter"
+
+msgid "Сумма"
+msgstr "Amount"
+
+msgid "Валюта"
+msgstr "Currency"
+
+msgid "Загрузка…"
+msgstr "Loading…"
+
+msgid "Нет данных"
+msgstr "No data"
+
+msgid "Ошибка загрузки"
+msgstr "Load error"
+
+msgid "Росс.рубль"
+msgstr "Russian Ruble"
+
+msgid "Евро"
+msgstr "Euro"
+
+msgid "Долл.США"
+msgstr "US Dollar"
+
+msgid "Конвертация выполняется по курсу"
+msgstr "Conversion is performed at the rate"
