@@ -81,24 +81,23 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
 
     function start_lvl( &$output, $depth = 0, $args = null ) {
         if ($depth === 0) {
-            $output .= "<ul class='_menu_17w3r_114'>\n";
+            // ul для первого уровня вложенности
+            $output .= "<ul class='_menu_17w3r_1144'>\n";
+        } else {
+            // ul для более глубоких уровней
+            $output .= "<ul class='_submenu_17w3r_200'>\n";
         }
     }
 
     function end_lvl( &$output, $depth = 0, $args = null ) {
-        if ($depth === 0) {
-            $output .= "</ul>\n";
-        }
+        $output .= "</ul>\n";
     }
 
     function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-
         if ($depth === 0) {
-            // Верхний уровень = колонка с заголовком
             $output .= '<li>' . "\n";
             $output .= '<div class="_menuColTitle_17w3r_121">' . esc_html($item->title) . '</div>' . "\n";
         } else {
-            // Дочерние = список ссылок
             $classes = '_menuListItem_17w3r_130';
             $link_classes = '_menuListLink_17w3r_134';
 
@@ -114,6 +113,7 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
         }
     }
 }
+
 
 
 
@@ -221,4 +221,35 @@ function get_rate_new(){
     } catch(Exception $e){}
 
     return $list;
+}
+
+
+/**
+ * Получить ссылку на страницу по slug с учётом мультиязычности
+ *
+ * @param string $slug Слаг страницы (например: 'client/service-centers')
+ * @return string|false  URL страницы или false, если не найдена
+ */
+function get_page_url_by_slug($slug)
+{
+    // Находим страницу по slug
+    $page = get_page_by_path($slug);
+
+    if (!$page) {
+        return false;
+    }
+
+    $page_id = $page->ID;
+
+    // Polylang
+    if (function_exists('pll_get_post')) {
+        $page_id = pll_get_post($page_id);
+    }
+
+    // WPML
+    if (function_exists('icl_object_id')) {
+        $page_id = icl_object_id($page_id, 'page', true);
+    }
+
+    return get_permalink($page_id);
 }

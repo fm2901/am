@@ -51,7 +51,6 @@
     </div>
     <div class="_footerBottom_17w3r_94">
         <div>
-            <div class="_appTitle_17w3r_100">Барномаи "Мой АНТ"</div>
             <div class="_stores_huq58_1 _stores_17w3r_109"><a href="https://apps.apple.com/us/app/com-itconsultingtj-myant/id1395436061" target="_blank"><img alt="app store logo" src="<?php echo get_template_directory_uri(); ?>/assets/app-store.png"/></a><a href="https://play.google.com/store/apps/details?id=com.itconsultingtj.myant" target="_blank"><img alt="google play logo" src="<?php echo get_template_directory_uri(); ?>/assets/google-play.png"/></a></div>
         </div>
         <?php
