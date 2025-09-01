@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Azizi Main\n"
+"Language: tj_TJ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: azizi-main\n"
+
+msgid "Центры обслуживания"
+msgstr "Марказҳои хизматрасонӣ"
+
+msgid "Интернет банкинг"
+msgstr "Бонки интернетӣ"
+
+msgid "Телефон"
+msgstr "Телефон"
+
+msgid "Почта"
+msgstr "Почта"
