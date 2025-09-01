@@ -8,13 +8,13 @@ msgstr ""
 "X-Domain: azizi-main\n"
 
 msgid "Центры обслуживания"
-msgstr "Service Centers"
+msgstr "Центры обслуживания"
 
 msgid "Интернет банкинг"
-msgstr "Internet Banking"
+msgstr "Интернет банкинг"
 
 msgid "Телефон"
-msgstr "Phone"
+msgstr "Телефон"
 
 msgid "Почта"
-msgstr "Email"
+msgstr "Почта"
