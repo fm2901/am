@@ -1,8 +1,8 @@
 <footer class="_footer_17w3r_1">
     <div class="_footerTop_17w3r_17"><a data-discover="true" href="https://newsite.ant.tj/"><img alt="logo" height="48" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" width="117"/></a>
         <ul class="_contacts_17w3r_30">
-            <li class="_contact_17w3r_30"><span class="_contactTitle_17w3r_42">Телефон</span><a class="_contactLink_17w3r_48" href="tel:(44) 630-20-23">(44) 630-20-23</a></li>
-            <li class="_contact_17w3r_30"><span class="_contactTitle_17w3r_42">Почта</span><a class="_contactLink_17w3r_48" href="mailto:info@azizimoliya.tj">info@azizimoliya.tj</a></li>
+            <li class="_contact_17w3r_30"><span class="_contactTitle_17w3r_42"><a href="/" target="_blank"><?php _e('Телефон', 'azizi-main'); ?></span><a class="_contactLink_17w3r_48" href="tel:(44) 630-20-23">(44) 630-20-23</a></li>
+            <li class="_contact_17w3r_30"><span class="_contactTitle_17w3r_42"><a href="/" target="_blank"><?php _e('Почта', 'azizi-main'); ?></span><a class="_contactLink_17w3r_48" href="mailto:info@azizimoliya.tj">info@azizimoliya.tj</a></li>
         </ul>
         <div class="_actions_17w3r_61">
             <ul class="_socials_17w3r_72">
