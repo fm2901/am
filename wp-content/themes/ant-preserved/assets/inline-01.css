@@ -1090,7 +1090,8 @@
 
     ._logo_hf6hk_172 img {
         width: auto;
-        height: 38px
+        height: 38px;
+        max-width: 35vw;
     }
 
     .burger {
