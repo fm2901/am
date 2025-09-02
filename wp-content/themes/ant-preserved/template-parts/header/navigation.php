@@ -1,5 +1,5 @@
 <header class="_header_hf6hk_1">
-    <div class="_top_hf6hk_17"><a href="/" target="_blank"><?php _e('Интернет банкинг', 'azizi-main'); ?></a>
+    <div class="_top_hf6hk_17"><a href="https://ib.azizi-moliya.tj:4446" target="_blank"><?php _e('Интернет банкинг', 'azizi-main'); ?></a>
         <a data-discover="true" href="<?php echo esc_url( get_page_url_by_slug('/центры-обслуживания/') ); ?>">
             <?php _e('Центры обслуживания', 'azizi-main'); ?>
         </a>

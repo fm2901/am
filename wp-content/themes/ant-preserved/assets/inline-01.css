@@ -735,7 +735,7 @@
 }
 
 .__active_1v0y3_18 {
-    color: #00008e;
+    color: #00718f;
     cursor: default
 }
 
@@ -942,7 +942,7 @@
 
 @media screen and (any-hover: hover) {
     ._top_hf6hk_17 a:hover {
-        color:#2955d9
+        color:#00718f;
     }
 }
 
@@ -3037,7 +3037,7 @@ button.swiper-pagination-bullet {
 }
 
 ._newsButton_o6yon_8 {
-    background-color: #2955d9;
+    background-color: #00718f;
     border-radius: 8px;
     color: #fff;
     padding: 8px;
@@ -3104,7 +3104,8 @@ button.swiper-pagination-bullet {
 }
 
 ._content_crtk2_8 {
-    background: linear-gradient(98.68deg,#00008f,#2955d9);
+    /*background: linear-gradient(98.68deg,#00008f,#2955d9);*/
+    background: linear-gradient(98.68deg, #00718f, #b5e4f1);
     border-radius: 24px;
     color: #fff;
     padding: 48px;
