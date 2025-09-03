@@ -5,7 +5,7 @@
         </a>
         <?php do_action('ant_lang_switcher'); ?>
     </div>
-    <div class="_main_hf6hk_51"><a class="_logo_hf6hk_172" data-discover="true" href="https://newsite.ant.tj/"><img alt="ant logo" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg"/></a>
+    <div class="_main_hf6hk_51"><a class="_logo_hf6hk_172" data-discover="true" href="/"><img alt="ant logo" src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg"/></a>
         <?php
         wp_nav_menu([
             'theme_location' => 'main-menu',
