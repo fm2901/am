@@ -57,7 +57,11 @@
                 </svg>
                 <span>Ҳисоби шахсӣ</span></button>
             <button class="sl-button _primary_pubuv_31" type="button"><span>Пайваст</span></button>
-            <button class="burger" type="button"><span style="top: 35%; transform: translate(0px, 0%) rotate(0deg);"></span><span style="opacity: 1;"></span><span style="bottom: 35%; transform: translate(0px, 0%) rotate(0deg);"></span></button>
+            <button class="burger" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
 </header>

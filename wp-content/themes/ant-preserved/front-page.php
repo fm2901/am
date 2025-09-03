@@ -24,7 +24,7 @@
 
     <section class="_section_g5z7t_1 __fullWidth_g5z7t_9">
         <iframe
-                src="https://maps.google.com/maps?q=Хоҷи%20Абдулазиз%2C%20улица%20Джура%20Зокирова%2C%20Худжанд%2C%20Таджикистан&amp;t=m&amp;z=14&amp;output=embed&amp;iwloc=near"
+                src="https://www.google.com/maps/d/u/0/embed?mid=1oIcAea3BTLe72lZSOrDm0ZILsH85i0Fm&ehbc=2E312F"
                 style="border:0; width:100vw; height:50vh;"
                 allowfullscreen=""
                 loading="lazy">

@@ -828,16 +828,23 @@
 }
 
 @media (max-width: 860px) {
+    /* ===== НАВИГАЦИЯ ===== */
     .navigation {
-        background-color:#fff;
-        padding: 40px 24px;
         position: fixed;
         left: 0;
-        bottom: 0;
+        right: 0;
         height: calc(100% - 144px);
-        width: 100%;
-        z-index: -2
+        transform: translateY(calc(-100% - 144px));
+        transition: transform 0.8s ease; /* тут задаём плавность */
+        background: #fff;
+        display: block; /* всегда в DOM, скрытие через transform */
     }
+
+    /* открытое меню */
+    .navigation.open {
+        transform: translateY(0); /* выезжает вниз */
+    }
+
 
     ._menu_1md32_1 {
         flex-direction: column;
@@ -884,14 +891,6 @@
         font-size: 15px;
         font-weight: 500;
         line-height: 24px
-    }
-}
-
-@media (max-width: 480px) {
-    .navigation {
-        padding:16px;
-        height: calc(100% - 142px);
-        display: none;
     }
 }
 
@@ -1010,8 +1009,28 @@
     height: 2px
 }
 
+/* закрытое состояние */
+.burger span:nth-child(1) {
+    top: 35%; transform: translate(0px, 0%) rotate(0deg);
+}
 .burger span:nth-child(2) {
-    top: calc(50% - 1px)
+    opacity: 1;
+}
+.burger span:nth-child(3) {
+    bottom: 35%; transform: translate(0px, 0%) rotate(0deg);
+}
+
+/* открытое состояние (крест) */
+.burger.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
 }
 
 @media (min-width: 860.2px) and (max-width: 1280px) {
@@ -5257,6 +5276,10 @@ body {
     margin: 0;
     min-width: 360px;
     overflow-x: hidden
+}
+
+body.open {
+    overflow: hidden;
 }
 
 img,svg {
