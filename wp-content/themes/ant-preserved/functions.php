@@ -61,7 +61,7 @@ class Ant_Menu_Walker extends Walker_Nav_Menu {
 
             // стрелка если есть подменю
             if (in_array('menu-item-has-children', $item->classes)) {
-                $output .= '<button type="button"><svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M4 6.6665L8 10.6665L12 6.6665H4Z" fill="currentColor"></path></svg></button>';
+                $output .= '<button type="button" class="menu-arrow"><svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M4 6.6665L8 10.6665L12 6.6665H4Z" fill="currentColor"></path></svg></button>';
             }
             $output .= '</div>';
 

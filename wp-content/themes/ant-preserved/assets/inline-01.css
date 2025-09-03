@@ -135,8 +135,8 @@
 
 @media screen and (any-hover: hover) {
     ._primary_pubuv_31:hover {
-        background-color:#1d39c4;
-        border-color: #1d39c4;
+        background-color:#00718f;
+        border-color: #00718f;
         color: #fff
     }
 }
@@ -817,7 +817,7 @@
 
 @media screen and (any-hover: hover) {
     ._submenuLink_1md32_66:hover {
-        color:#2955d9
+        color:#00718f
     }
 }
 
@@ -5284,4 +5284,18 @@ body.open {
 
 img,svg {
     vertical-align: top
+}
+
+/* стрелка по умолчанию */
+.menu-arrow {
+    display: inline-flex;
+    transition: transform 0.3s ease; /* плавный поворот */
+}
+
+._item_1md32_7:hover {
+    color: #00718f;
+}
+._item_1md32_7:hover .menu-arrow {
+    transform: rotate(180deg);
+
 }
