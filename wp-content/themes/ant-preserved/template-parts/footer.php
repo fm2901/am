@@ -51,7 +51,9 @@
     </div>
     <div class="_footerBottom_17w3r_94">
         <div>
-            <div class="_stores_huq58_1 _stores_17w3r_109"><a href="https://apps.apple.com/us/app/com-itconsultingtj-myant/id1395436061" target="_blank"><img alt="app store logo" src="<?php echo get_template_directory_uri(); ?>/assets/app-store.png"/></a><a href="https://play.google.com/store/apps/details?id=com.itconsultingtj.myant" target="_blank"><img alt="google play logo" src="<?php echo get_template_directory_uri(); ?>/assets/google-play.png"/></a></div>
+            <div class="_stores_huq58_1 _stores_17w3r_109">
+                <a href="https://onelink.to/fakf6p" target="_blank"><img alt="app store logo" src="<?php echo get_template_directory_uri(); ?>/assets/app-store.png"/></a>
+                <a href="https://onelink.to/fakf6p" target="_blank"><img alt="google play logo" src="<?php echo get_template_directory_uri(); ?>/assets/google-play.png"/></a></div>
         </div>
         <?php
         wp_nav_menu([
@@ -63,44 +65,5 @@
             'walker'         => new Footer_Menu_Walker(),
         ]);
         ?>
-
-
-        <!--        <ul class="_menu_17w3r_114">-->
-<!--            <li>-->
-<!--                <div class="_menuColTitle_17w3r_121">Дар бораи ширкат</div>-->
-<!--                <ul>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/">АНТ</a>-->
-<!--                    </li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/promotions">Иқдомҳо</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" href="https://hr.ant.tj/" target="_blank">Вакансияҳо</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/service-centers">Тамос</a></li>-->
-<!--                </ul>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <div class="_menuColTitle_17w3r_121">Телевизион</div>-->
-<!--                <ul>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/packages">Физическим лицам</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/television/connection">Юридическим лицам</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" href="https://shop.ant.tj/">О нас</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/television">Ещё</a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <div class="_menuColTitle_17w3r_121">Барои обуначиён</div>-->
-<!--                <ul>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134">Ҳисоби шахсӣ</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134">Пардохт</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134">Тавозунро тафтиш-->
-<!--                            кунед</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/client/discount-program">Барномаи тахфифи “Пардохти-->
-<!--                            мусоид”</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/client/service-managment">Идоракунии хизматрасонӣ</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/client/channel-setup">Танзими каналҳо</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/client/technical-support-service">Дастгирии техникӣ</a></li>-->
-<!--                    <li class="_menuListItem_17w3r_130"><a class="_menuListLink_17w3r_134" data-discover="true" href="https://newsite.ant.tj/client/mobile-app">Барномаи- Мой АНТ</a></li>-->
-<!--                </ul>-->
-<!--            </li>-->
-<!--        </ul>-->
     </div>
 </footer>
