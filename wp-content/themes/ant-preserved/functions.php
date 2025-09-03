@@ -66,9 +66,11 @@ class Ant_Menu_Walker extends Walker_Nav_Menu {
             $output .= '</div>';
 
         } else {
+            $icon =  get_post_meta($item->ID, '_menu_item_icon_class', true);
             // подменю
             $output .= $indent . '<li class="_submenuItem_1md32_52">';
-            $output .= '<svg color="#2955D9" fill="none" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/></svg>';
+          //  $output .= '<svg width="20" height="20" viewBox="0 0 55 64" fill="none" xmlns="http://www.w3.org/2000/svg" color="#2955D9"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.998 43.3974H21.4826C21.4591 41.9258 22.2535 38.9827 22.2535 38.9827H32.4195C32.7701 39.7055 33.4712 41.6003 33.4712 43.3974H42.0948C40.4589 36.1769 35.1809 20.9096 31.3679 16.8984H23.0247C20.0328 22.2947 14.6141 35.1751 12.998 43.3974ZM26.9112 26.5435C26.9969 26.3618 27.2555 26.3618 27.3412 26.5435L30.5967 33.4456H27.1262H23.6557L26.9112 26.5435Z" fill="#00008F"></path><path d="M23.2734 4.42285C25.9395 2.88361 29.2246 2.8836 31.8906 4.42285L49.4131 14.54C52.0791 16.0792 53.7216 18.9236 53.7217 22.002V42.2363C53.7216 45.3147 52.0791 48.159 49.4131 49.6982L31.8906 59.8154C29.2246 61.3547 25.9395 61.3547 23.2734 59.8154L5.75098 49.6982C3.08501 48.159 1.4425 45.3147 1.44238 42.2363V22.002C1.4425 18.9236 3.08501 16.0792 5.75098 14.54L23.2734 4.42285Z" stroke="#00008F" stroke-width="1.7828"></path></svg>';
+            $output .= '<span class="menu-icon '.$icon.'"></span>';
             $output .= '<a class="_submenuLink_1md32_66" href="' . esc_url($item->url) . '">' . esc_html($item->title) . '</a>';
         }
     }
@@ -254,3 +256,48 @@ function get_page_url_by_slug($slug)
 
     return get_permalink($page_id);
 }
+
+// Добавляем выпадающий список "Иконка" в пункты меню
+add_action( 'wp_nav_menu_item_custom_fields', function( $item_id, $item, $depth, $args ) {
+    // Список доступных кастомных классов
+    $icon_classes = [
+        ''             => '— Без иконки —',
+        'icon-home'    => 'Домой',
+        'icon-user'    => 'Профиль',
+        'icon-cart'    => 'Корзина',
+        'icon-mail'    => 'Почта',
+    ];
+
+    // Текущее значение
+    $value = get_post_meta( $item_id, '_menu_item_icon_class', true );
+    ?>
+    <p class="description description-wide">
+        <label for="edit-menu-item-icon-class-<?php echo $item_id; ?>">
+            <?php _e( 'Иконка', 'your-textdomain' ); ?><br>
+            <select id="edit-menu-item-icon-class-<?php echo $item_id; ?>" name="menu-item-icon-class[<?php echo $item_id; ?>]">
+                <?php foreach ( $icon_classes as $class => $label ) : ?>
+                    <option value="<?php echo esc_attr( $class ); ?>" <?php selected( $value, $class ); ?>>
+                        <?php echo esc_html( $label ); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </label>
+    </p>
+    <?php
+}, 10, 4 );
+
+// Сохраняем значение
+add_action( 'wp_update_nav_menu_item', function( $menu_id, $menu_item_db_id ) {
+    if ( isset( $_POST['menu-item-icon-class'][ $menu_item_db_id ] ) ) {
+        update_post_meta( $menu_item_db_id, '_menu_item_icon_class', sanitize_text_field( $_POST['menu-item-icon-class'][ $menu_item_db_id ] ) );
+    }
+}, 10, 2 );
+
+// Выводим иконку в меню
+add_filter( 'nav_menu_item_title', function( $title, $item ) {
+    $icon_class = get_post_meta( $item->ID, '_menu_item_icon_class', true );
+    if ( $icon_class ) {
+        $title = '<span class="menu-icon ' . esc_attr( $icon_class ) . '"></span> ' . $title;
+    }
+    return $title;
+}, 10, 2 );

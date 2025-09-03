@@ -102,3 +102,27 @@
 /* На всякий случай отключим любые отрицательные внешние отступы внутри виджета */
 #cw-widget [style*="margin-left:-"],
 #cw-widget [style*="margin-right:-"] { margin-left: 0 !important; margin-right: 0 !important; }
+
+.menu-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Кастомные иконки */
+.icon-home {
+    background-image: url('/wp-content/themes/ant-preserved/assets/ant.svg');
+}
+.icon-user {
+    background-image: url('/wp-content/uploads/icons/user.svg');
+}
+.icon-cart {
+    background-image: url('/wp-content/uploads/icons/cart.svg');
+}
+.icon-mail {
+    background-image: url('/wp-content/uploads/icons/mail.svg');
+}
