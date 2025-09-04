@@ -166,3 +166,9 @@
     font-size: 0.8rem;
     color: #6b7280;
 }
+
+@media screen and (max-width: 640px) {
+    .cw-name {
+        display: none;
+    }
+}
