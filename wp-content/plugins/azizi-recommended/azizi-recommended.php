@@ -96,7 +96,7 @@ class AziziRecommended {
         ob_start(); ?>
         <section class="azp-section">
             <div class="azp-head">
-                <h2 class="azp-title"><?php echo esc_html($atts['title']); ?></h2>
+                <h2 class="azp-title"><?php _e('Рекомендуемые продукты', 'azizi-recommended'); ?></h2>
                 <div class="azp-nav">
                     <button class="azp-prev" type="button"></button>
                     <button class="azp-next" type="button"></button>
@@ -157,5 +157,9 @@ class AziziRecommended {
         return ob_get_clean();
     }
 }
+
+add_action('plugins_loaded', function() {
+    load_plugin_textdomain('azizi-recommended', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+});
 
 new AziziRecommended();

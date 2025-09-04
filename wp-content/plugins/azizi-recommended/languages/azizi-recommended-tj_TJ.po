@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Azizi Recommended 1.1.0\n"
+"Language: tj_TJ\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Реком. продукты"
+msgstr "Маҳсулоти тавсияшуда"
+
+msgid "Реком. продукт"
+msgstr "Маҳсулоти тавсияшуда"
+
+msgid "Добавить"
+msgstr "Илова кардан"
+
+msgid "Добавить продукт"
+msgstr "Иловаи маҳсулот"
+
+msgid "Редактировать продукт"
+msgstr "Таҳрири маҳсулот"
+
+msgid "Настройки карточки"
+msgstr "Танзимоти корт"
+
+msgid "Цена"
+msgstr "Нарх"
+
+msgid "Подпись к цене"
+msgstr "Шарҳ ба нарх"
+
+msgid "Преимущества (каждое с новой строки)"
+msgstr "Афзалиятҳо (ҳар кадом аз сатри нав)"
+
+msgid "Кнопка 1 — текст"
+msgstr "Тугмаи 1 — Матн"
+
+msgid "Кнопка 1 — ссылка"
+msgstr "Тугмаи 1 — Суроға"
+
+msgid "Кнопка 2 — текст"
+msgstr "Тугмаи 2 — Матн"
+
+msgid "Кнопка 2 — ссылка"
+msgstr "Тугмаи 2 — Суроға"
+
+msgid "Рекомендуемые продукты"
+msgstr "Маҳсулоти тавсияшуда"

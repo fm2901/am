@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Azizi Recommended 1.1.0\n"
+"Language: en_US\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: azizi-recommended.php
+msgid "Реком. продукты"
+msgstr "Recommended Products"
+
+msgid "Реком. продукт"
+msgstr "Recommended Product"
+
+msgid "Добавить"
+msgstr "Add"
+
+msgid "Добавить продукт"
+msgstr "Add Product"
+
+msgid "Редактировать продукт"
+msgstr "Edit Product"
+
+msgid "Настройки карточки"
+msgstr "Card Settings"
+
+msgid "Цена"
+msgstr "Price"
+
+msgid "Подпись к цене"
+msgstr "Price Suffix"
+
+msgid "Преимущества (каждое с новой строки)"
+msgstr "Features (each on a new line)"
+
+msgid "Кнопка 1 — текст"
+msgstr "Button 1 — Text"
+
+msgid "Кнопка 1 — ссылка"
+msgstr "Button 1 — URL"
+
+msgid "Кнопка 2 — текст"
+msgstr "Button 2 — Text"
+
+msgid "Кнопка 2 — ссылка"
+msgstr "Button 2 — URL"
+
+msgid "Рекомендуемые продукты"
+msgstr "Recommended Products"

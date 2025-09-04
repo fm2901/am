@@ -58,11 +58,11 @@ class Azizi_Rates_Widget {
 
     public function render() {
         ob_start(); ?>
-        <section class="sl-section cw-widget" id="cw-widget">
+        <section class="cw-widget" id="cw-widget">
             <div class="cw-header">
                 <h2 class="cw-title"><?php _e('Курс валют', 'azizi'); ?></h2>
                 <div class="cw-controls">
-                    <button class="sl-button sl-white cw-mode" id="cw-mode-btn" type="button" aria-expanded="false">
+                    <button class="cw-mode-btn" id="cw-mode-btn" type="button" aria-expanded="false">
                         <span id="cw-mode-label"><?php _e('По картам', 'azizi'); ?></span>
                         <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6.5L8 10.5L12 6.5" fill="currentColor"/></svg>
                     </button>
@@ -78,8 +78,8 @@ class Azizi_Rates_Widget {
             </div>
 
             <div class="cw-grid">
-                <!-- Таблица -->
-                <div class="cw-card">
+                <!-- Карточка с курсами -->
+                <div class="cw-card cw-rates">
                     <table class="cw-table" aria-describedby="cw-mode-label">
                         <thead>
                         <tr>
@@ -94,7 +94,7 @@ class Azizi_Rates_Widget {
                     </table>
                 </div>
 
-                <!-- Конвертер -->
+                <!-- Карточка конвертера -->
                 <div class="cw-card cw-converter">
                     <div class="cw-conv-title"><?php _e('Конвертер валют', 'azizi'); ?></div>
                     <div class="cw-conv-row">
@@ -113,6 +113,7 @@ class Azizi_Rates_Widget {
         <?php
         return ob_get_clean();
     }
+
 }
 
 // ✅ Загружаем текстовый домен правильно
