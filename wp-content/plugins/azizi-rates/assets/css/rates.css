@@ -171,4 +171,10 @@
     .cw-name {
         display: none;
     }
+    #cw-currency {
+        max-width: 30% !important;
+    }
+    #cw-amount {
+        max-width: 60% !important;
+    }
 }
