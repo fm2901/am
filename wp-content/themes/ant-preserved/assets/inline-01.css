@@ -1388,7 +1388,7 @@ body {
 
 ._menu_17w3r_114 {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
     flex-basis: 878px
 }
