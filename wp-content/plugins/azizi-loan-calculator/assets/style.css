@@ -1,0 +1,69 @@
+/* Styles (same visual as before) */
+.azizi-loan-wrapper{max-width:1200px;margin:0 auto;padding:0.5rem}
+.azizi-loan-card{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:stretch;border:1px solid #e4eef1;border-radius:16px;padding:28px 32px;background:#fff;box-shadow:0 6px 24px rgba(12,68,92,.06)}
+.azizi-loan-left{padding-right:8px}
+.azizi-title{font-size:28px;line-height:1.2;margin:0 0 18px;color:#0b506d;font-weight:800}
+.azizi-field{margin:16px 0 22px}
+.azizi-labels{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.azizi-labels label{font-weight:700;color:#0b506d}
+.azizi-value{font-weight:800;font-size:20px;color:#0b506d}
+.azizi-range{width:100%;-webkit-appearance:none;background:linear-gradient(90deg,#0b8db3,#0b8db3) no-repeat #e8f2f6;height:10px;border-radius:999px;outline:none;background-size:0 100%}
+.azizi-range::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#0b8db3;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer}
+.azizi-range::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#0b8db3;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer}
+.azizi-range-minmax{display:flex;justify-content:space-between;color:#7b96a5;font-size:12px;margin-top:6px}
+.azizi-loan-right{background:#f4fbff;border:1px solid #e4eef1;border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:center}
+.azizi-rate{font-weight:700;color:#0b506d;text-align:center;margin-bottom:16px}
+.azizi-rate-number{font-size:32px;font-weight:900;margin-top:4px}
+.azizi-result{background:#fff;border:1px solid #e4eef1;border-radius:16px;padding:20px 18px;text-align:center}
+.azizi-result-title{color:#0b506d;font-weight:700}
+.azizi-result-number{font-size:32px;font-weight:900;margin-top:6px;color:#0b506d}
+.azizi-extra{margin-top:12px;border-top:1px dashed #e0e9ef;padding-top:10px}
+.azizi-extra-row{display:flex;justify-content:space-between;font-size:14px;margin:6px 0;color:#2f5568}
+@media (max-width: 900px){
+  .azizi-loan-card{grid-template-columns:1fr;gap:14px;padding:20px}
+  .azizi-title{font-size:22px}
+  .azizi-result-number{font-size:28px}
+}
+.azizi-schedule {
+  margin-top: 20px;
+}
+
+.azizi-schedule h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.azizi-schedule-table-wrapper {
+  max-height: 240px; /* ограничиваем высоту */
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.azizi-schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.azizi-schedule th,
+.azizi-schedule td {
+  padding: 6px 8px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.azizi-schedule th:first-child,
+.azizi-schedule td:first-child {
+  text-align: center;
+}
+
+.azizi-schedule tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.azizi-schedule tbody tr:hover {
+  background-color: #eef6ff;
+  cursor: pointer;
+}

@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head><meta charset="utf-8"/>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<link href="./favicon.ico" rel="icon" type="image/svg+xml"/>
+<link href="/favicon.ico" rel="icon" type="image/svg+xml"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="кабельное телевидение,  телевидение ант, кабельное тв в худжанде, цифровое телевидение худжанд, подключить кабельное тв в худжанде" name="keywords"/>
 <meta content="кабельное телевидение в цифровом формате с высоким качеством звука и изображения доступно в Худжанде. " name="description"/>

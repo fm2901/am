@@ -1,4 +1,89 @@
-@charset "UTF-8";._spinner_1t2bv_1 {
+@charset "UTF-8";
+
+/* === Шрифты === */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Medium.woff2') format('woff2'),
+    url('/fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('/fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* === Базовые стили === */
+body {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    color: #0d0e11;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Кнопки */
+.sl-button,
+._primary_pubuv_31,
+.sl-white,
+._outlined_pubuv_56 {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+/* Заголовки */
+._title_1hiez_73,
+._title_1fhxe_48,
+._title_mc4sf_23,
+._chatTitle_78gwj_30,
+._menuColTitle_17w3r_121 {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+/* Подзаголовки / текст */
+._subtitle_mc4sf_32,
+._chatSubtitle_78gwj_39,
+._contactTitle_17w3r_42,
+._contactLink_17w3r_48 {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+/* Формы */
+._input_cvsu8_45,
+._label_cvsu8_13,
+._value_2beyz_54,
+._label_2beyz_31,
+._error_cvsu8_56,
+._error_2beyz_125 {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+/* Меню и хлебные крошки */
+._link_1md32_17,
+._submenuLink_1md32_66,
+._breadcrumb_1k9pe_1,
+._menuListLink_17w3r_134 {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+/* Остальные стили остаются без изменений */
+
+._spinner_1t2bv_1 {
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -1330,7 +1415,7 @@
 
 @media screen and (any-hover: hover) {
     ._menuListLink_17w3r_134:hover {
-        color:#00008e
+        color:#00718f
     }
 }
 

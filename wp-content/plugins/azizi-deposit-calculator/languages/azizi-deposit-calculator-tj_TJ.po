@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Azizi Deposit Calculator 1.0.0\n"
+"Language: tj_TJ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Deposit Calculator"
+msgstr "Калькулятори пасандоз"
+
+msgid "Deposit amount"
+msgstr "Маблағи пасандоз"
+
+msgid "Term"
+msgstr "Мӯҳлат"
+
+msgid "Rate"
+msgstr "Меъёри фоиз"
+
+msgid "Capitalization"
+msgstr "Капитализатсия"
+
+msgid "No"
+msgstr "Не"
+
+msgid "Monthly"
+msgstr "Ҳармоҳа"
+
+msgid "Yearly"
+msgstr "Ҳарсол"
+
+msgid "Profit"
+msgstr "Фоида"
+
+msgid "Total amount"
+msgstr "Ҳамагӣ"
+
+msgid "Accrual schedule"
+msgstr "Ҷадвали ҳисоб"
+
+msgid "Balance"
+msgstr "Боќимонда"
+
+msgid "mo."
+msgstr "моҳ"
+
+msgid "somoni"
+msgstr "сомонӣ"

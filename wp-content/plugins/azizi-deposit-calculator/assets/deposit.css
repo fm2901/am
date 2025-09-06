@@ -1,0 +1,142 @@
+:root {
+    --azizi-primary: #16576C;
+    --azizi-accent: #ffcc00;
+    --azizi-bg: #f5f7fa;
+    --azizi-text: #333;
+    --azizi-success: #2e7d32;
+}
+
+.azizi-deposit-wrapper {
+    margin: 24px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--azizi-text);
+}
+
+.azizi-loan-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.azizi-loan-left, .azizi-loan-right {
+    flex: 1 1 320px;
+}
+
+.azizi-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--azizi-primary);
+}
+
+.azizi-field {
+    margin-bottom: 20px;
+}
+
+.azizi-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.azizi-value {
+    font-weight: 600;
+    background: var(--azizi-bg);
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.azizi-range {
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    background: linear-gradient(to right, var(--azizi-primary), var(--azizi-accent));
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.azizi-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--azizi-primary);
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+.azizi-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--azizi-primary);
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.azizi-result {
+    background: var(--azizi-bg);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.azizi-extra-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.azizi-extra-row strong {
+    color: var(--azizi-success);
+    font-size: 17px;
+}
+
+.azizi-schedule h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--azizi-primary);
+}
+
+.azizi-schedule-table-wrapper {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.azizi-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.azizi-schedule th,
+.azizi-schedule td {
+    padding: 8px 10px;
+    text-align: right;
+}
+
+.azizi-schedule th:first-child,
+.azizi-schedule td:first-child {
+    text-align: center;
+}
+
+.azizi-schedule tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.azizi-schedule tbody tr:hover {
+    background-color: #eef4ff;
+    cursor: pointer;
+}
