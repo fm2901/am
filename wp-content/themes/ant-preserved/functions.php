@@ -82,6 +82,18 @@ class Ant_Menu_Walker extends Walker_Nav_Menu {
 
 class Footer_Menu_Walker extends Walker_Nav_Menu {
 
+    // Передаём флаг наличия детей в $args
+    function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output ) {
+        if ( !$element )
+            return;
+
+        $id_field = $this->db_fields['id'];
+        if ( is_object($args[0]) )
+            $args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
+
+        parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+    }
+
     function start_lvl( &$output, $depth = 0, $args = null ) {
         if ($depth === 0) {
             $output .= "<ul class='_menu_17w3r_1144'>\n";
@@ -95,9 +107,9 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
     }
 
     function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-        // Показываем только верхние пункты с дочерними
         if ($depth === 0) {
-            if (isset($args->has_children) && $args->has_children) {
+            // Выводим только если есть дети
+            if (!empty($args->has_children)) {
                 $output .= '<li>' . "\n";
                 $output .= '<div class="_menuColTitle_17w3r_121">' . esc_html($item->title) . '</div>' . "\n";
             }
@@ -112,11 +124,12 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
     }
 
     function end_el( &$output, $item, $depth = 0, $args = null ) {
-        if ($depth === 0 && isset($args->has_children) && $args->has_children) {
+        if ($depth === 0 && !empty($args->has_children)) {
             $output .= "</li>\n";
         }
     }
 }
+
 
 
 
