@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Azizi Credit Application 1.0.0\n"
+"Language: tj_TJ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Apply for a Loan"
+msgstr "Дархост барои қарз"
+
+msgid "Full Name"
+msgstr "Ном ва насаб"
+
+msgid "Phone Number"
+msgstr "Рақами телефон"
+
+msgid "Email"
+msgstr "Почтаи электронӣ"
+
+msgid "Loan Amount"
+msgstr "Ҳаҷми қарз"
+
+msgid "Currency"
+msgstr "Асъор"
+
+msgid "Somoni"
+msgstr "Сомонӣ"
+
+msgid "USD"
+msgstr "Доллари ИМА"
+
+msgid "Euro"
+msgstr "Евро"
+
+msgid "City"
+msgstr "Шаҳр"
+
+msgid "Send Application"
+msgstr "Фиристодани дархост"
+
+msgid "New Loan Application"
+msgstr "Дархости нави қарз"
+
+msgid "New loan request:\n\nName: %s\nPhone: %s\nEmail: %s\nAmount: %s %s\nCity: %s\n"
+msgstr "Дархости нави қарз:\n\nНом: %s\nТелефон: %s\nEmail: %s\nҲаҷм: %s %s\nШаҳр: %s\n"
+
+msgid "Your application was sent successfully!"
+msgstr "Дархости шумо бомуваффақият фиристода шуд!"
