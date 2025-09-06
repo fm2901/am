@@ -84,10 +84,8 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
 
     function start_lvl( &$output, $depth = 0, $args = null ) {
         if ($depth === 0) {
-            // ul для первого уровня вложенности
             $output .= "<ul class='_menu_17w3r_1144'>\n";
         } else {
-            // ul для более глубоких уровней
             $output .= "<ul class='_submenu_17w3r_200'>\n";
         }
     }
@@ -97,9 +95,12 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
     }
 
     function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        // Показываем только верхние пункты с дочерними
         if ($depth === 0) {
-            $output .= '<li>' . "\n";
-            $output .= '<div class="_menuColTitle_17w3r_121">' . esc_html($item->title) . '</div>' . "\n";
+            if (isset($args->has_children) && $args->has_children) {
+                $output .= '<li>' . "\n";
+                $output .= '<div class="_menuColTitle_17w3r_121">' . esc_html($item->title) . '</div>' . "\n";
+            }
         } else {
             $classes = '_menuListItem_17w3r_130';
             $link_classes = '_menuListLink_17w3r_134';
@@ -111,11 +112,12 @@ class Footer_Menu_Walker extends Walker_Nav_Menu {
     }
 
     function end_el( &$output, $item, $depth = 0, $args = null ) {
-        if ($depth === 0) {
+        if ($depth === 0 && isset($args->has_children) && $args->has_children) {
             $output .= "</li>\n";
         }
     }
 }
+
 
 
 
