@@ -288,10 +288,10 @@ add_action( 'wp_nav_menu_item_custom_fields', function( $item_id, $item, $depth,
         'icon-obrgraj'    => 'obrgraj',
         'icon-rko'        => 'rko',
         'icon-rukovodstvo'=> 'rukovodstvo',
-        'icon-strahovklad'=> 'strahvkad',
+        'icon-strahvklad' => 'strahvkad',
         'icon-tarifi'     => 'tarifi',
         'icon-vakansii'   => 'vakansii',
-        'icon-vkladjur'   => 'vkladjur',
+        'icon-vkladyur'   => 'vkladyur',
     ];
 
 
