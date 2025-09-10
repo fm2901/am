@@ -276,12 +276,24 @@ function get_page_url_by_slug($slug)
 add_action( 'wp_nav_menu_item_custom_fields', function( $item_id, $item, $depth, $args ) {
     // Список доступных кастомных классов
     $icon_classes = [
-        ''             => '— Без иконки —',
-        'icon-home'    => 'Домой',
-        'icon-user'    => 'Профиль',
-        'icon-cart'    => 'Корзина',
-        'icon-mail'    => 'Почта',
+        ''                => '— Без иконки —',
+        'icon-credit'     => 'credit',
+        'icon-credyur'    => 'credyur',
+        'icon-deposit'    => 'deposit',
+        'icon-filiali'    => 'filiali',
+        'icon-finotchet'  => 'finotchet',
+        'icon-legdens'    => 'legdens',
+        'icon-mt'         => 'mt',
+        'icon-nabsovet'   => 'nabsovet',
+        'icon-obrgraj'    => 'obrgraj',
+        'icon-rko'        => 'rko',
+        'icon-rukovodstvo'=> 'rukovodstvo',
+        'icon-strahovklad'=> 'strahvkad',
+        'icon-tarifi'     => 'tarifi',
+        'icon-vakansii'   => 'vakansii',
+        'icon-vkladjur'   => 'vkladjur',
     ];
+
 
     // Текущее значение
     $value = get_post_meta( $item_id, '_menu_item_icon_class', true );

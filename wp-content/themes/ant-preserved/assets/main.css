@@ -114,15 +114,62 @@
 }
 
 /* Кастомные иконки */
-.icon-home {
-    background-image: url('/wp-content/themes/ant-preserved/assets/ant.svg');
+.icon-credit {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/credit.svg');
 }
-.icon-user {
-    background-image: url('/wp-content/uploads/icons/user.svg');
+
+.icon-credyur {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/credyur.svg');
 }
-.icon-cart {
-    background-image: url('/wp-content/uploads/icons/cart.svg');
+
+.icon-deposit {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/deposit.svg');
 }
-.icon-mail {
-    background-image: url('/wp-content/uploads/icons/mail.svg');
+
+.icon-filiali {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/filiali.svg');
+}
+
+.icon-finotchet {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/finotchet.svg');
+}
+
+.icon-legdens {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/legdens.svg');
+}
+
+.icon-mt {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/mt.svg');
+}
+
+.icon-nabsovet {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/nabsovet.svg');
+}
+
+.icon-obrgraj {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/obrgraj.svg');
+}
+
+.icon-rko {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/rko.svg');
+}
+
+.icon-rukovodstvo {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/rukovodstvo.svg');
+}
+
+.icon-strahovklad {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/strahovklad.svg');
+}
+
+.icon-tarifi {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/tarifi.svg');
+}
+
+.icon-vakansii {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/vakansii.svg');
+}
+
+.icon-vkladjur {
+    background-image: url('/wp-content/themes/ant-preserved/assets/menu-icons/vkladjur.svg');
 }
