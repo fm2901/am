@@ -24,3 +24,6 @@ msgstr "Download the mobile app"
 
 msgid "Управляй своими картами и счетами прямо с телефона. Пополняй баланс, делай переводы и контролируй расходы 24/7 — всё в одном приложении."
 msgstr "Manage your card and account directly from your phone. Top up your balance, postpone transfers and control your expenses around the clock — all in one app."
+
+msgid "Заказать карту"
+msgstr "Order a card"

@@ -46,7 +46,7 @@
                         </svg>
                     </a></li>
             </ul>
-            <button class="sl-button _primary_pubuv_31" type="button"><span>Пайваст кунед</span></button>
+            <button class="sl-button _primary_pubuv_31" type="button"><a href="#">Заказать карту</a></button>
         </div>
     </div>
     <div class="_footerBottom_17w3r_94">

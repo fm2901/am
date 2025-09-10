@@ -1,0 +1,26 @@
+msgid "Выберите продукт"
+msgstr "Choose a product"
+
+msgid "Сумма кредита"
+msgstr "Loan amount"
+
+msgid "Срок (месяцы)"
+msgstr "Term (months)"
+
+msgid "Ежемесячный платеж:"
+msgstr "Monthly payment:"
+
+msgid "Оформить заявку"
+msgstr "Apply"
+
+msgid "ФИО"
+msgstr "Full name"
+
+msgid "Телефон"
+msgstr "Phone"
+
+msgid "Город"
+msgstr "City"
+
+msgid "Отправить"
+msgstr "Submit"

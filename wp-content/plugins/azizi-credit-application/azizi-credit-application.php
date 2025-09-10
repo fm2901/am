@@ -145,3 +145,15 @@ add_action('init', function() {
         exit;
     }
 });
+
+add_action('phpmailer_init', function($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = 'smtp.yandex.ru'; // SMTP сервер
+    $phpmailer->SMTPAuth   = true;
+    $phpmailer->Port       = 465;
+    $phpmailer->Username   = 'info@yourdomain.com'; // учётка
+    $phpmailer->Password   = 'app_password';        // пароль (лучше пароль приложения)
+    $phpmailer->SMTPSecure = 'ssl';                 // или 'tls'
+    $phpmailer->From       = 'info@yourdomain.com';
+    $phpmailer->FromName   = 'Azizi Credit';
+});

@@ -2,6 +2,7 @@
     <?php echo do_shortcode('[azizi_slider]'); ?>
     <?php echo do_shortcode('[azizi_quick_actions]'); ?>
     <?php echo do_shortcode('[azizi_rates_widget]'); ?>
+    <?php echo do_shortcode('[credit_calculator]'); ?>
 
 
     <section class="_section_crtk2_1">
