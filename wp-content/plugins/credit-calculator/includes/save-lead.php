@@ -1,28 +1,38 @@
 <?php
-add_action('wp_ajax_save_lead', 'save_lead');
-add_action('wp_ajax_nopriv_save_lead', 'save_lead');
+add_action('wp_ajax_save_lead', 'cc_save_lead');
+add_action('wp_ajax_nopriv_save_lead', 'cc_save_lead');
 
-function save_lead() {
+function cc_save_lead() {
     global $wpdb;
+    $table_name = $wpdb->prefix . 'cc_leads';
 
-    $name  = sanitize_text_field($_POST['name']);
-    $phone = sanitize_text_field($_POST['phone']);
-    $city  = sanitize_text_field($_POST['city']);
+    $name     = sanitize_text_field($_POST['name'] ?? '');
+    $phone    = sanitize_text_field($_POST['phone'] ?? '');
+    $city     = sanitize_text_field($_POST['city'] ?? '');
+    $product  = intval($_POST['product'] ?? 0);
+    $amount   = intval($_POST['desired_amount'] ?? 0);
+    $term     = intval($_POST['desired_term'] ?? 0);
 
-    $table = $wpdb->prefix . "credit_leads";
-    $wpdb->insert($table, [
-        'name' => $name,
-        'phone' => $phone,
-        'city' => $city,
-        'created_at' => current_time('mysql')
-    ]);
+    if (empty($name) || empty($phone)) {
+        wp_send_json_error(['message' => __('Заполните обязательные поля', 'credit-calculator')]);
+    }
 
-    // Отправка письма
+    $wpdb->insert($table_name, [
+        'name'    => $name,
+        'phone'   => $phone,
+        'city'    => $city,
+        'product' => $product,
+        'amount'  => $amount,
+        'term'    => $term,
+    ], ['%s','%s','%s','%d','%d','%d']);
+
+    $product_title = get_the_title($product);
     wp_mail(
         get_option('admin_email'),
-        "Новая заявка на кредит",
-        "ФИО: $name\nТелефон: $phone\nГород: $city"
+        __('Новая заявка с калькулятора', 'credit-calculator'),
+        "Имя: $name\nТелефон: $phone\nГород: $city\nПродукт: $product_title\nСумма: $amount TJS\nСрок: $term мес."
     );
 
-    wp_send_json_success(['message' => 'Заявка успешно отправлена!']);
+    wp_send_json_success(['message' => __('Заявка успешно отправлена!', 'credit-calculator')]);
 }
+

@@ -47,3 +47,43 @@
 [10-Sep-2025 17:42:26 UTC] PHP Warning:  Undefined array key "cc_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 68
 [10-Sep-2025 17:42:26 UTC] PHP Warning:  Undefined array key "cc_term_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 69
 [10-Sep-2025 17:42:26 UTC] PHP Warning:  Undefined array key "cc_term_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 70
+[10-Sep-2025 18:08:49 UTC] WordPress database error Table 'wpdb.wp_credit_leads' doesn't exist for query SHOW FULL COLUMNS FROM `wp_credit_leads` made by do_action('wp_ajax_save_lead'), WP_Hook->do_action, WP_Hook->apply_filters, save_lead
+[10-Sep-2025 18:12:43 UTC] WordPress database error Table 'wpdb.wp_credit_leads' doesn't exist for query SHOW FULL COLUMNS FROM `wp_credit_leads` made by do_action('wp_ajax_save_lead'), WP_Hook->do_action, WP_Hook->apply_filters, save_lead
+[10-Sep-2025 18:12:44 UTC] WordPress database error Table 'wpdb.wp_credit_leads' doesn't exist for query SHOW FULL COLUMNS FROM `wp_credit_leads` made by do_action('wp_ajax_save_lead'), WP_Hook->do_action, WP_Hook->apply_filters, save_lead
+[10-Sep-2025 18:14:30 UTC] WordPress database error Table 'wpdb.wp_cc_leads' doesn't exist for query SHOW FULL COLUMNS FROM `wp_cc_leads` made by do_action('wp_ajax_save_lead'), WP_Hook->do_action, WP_Hook->apply_filters, cc_save_lead
+[10-Sep-2025 18:15:32 UTC] WordPress database error Table 'wpdb.wp_cc_leads' doesn't exist for query SHOW FULL COLUMNS FROM `wp_cc_leads` made by do_action('wp_ajax_save_lead'), WP_Hook->do_action, WP_Hook->apply_filters, cc_save_lead
+[10-Sep-2025 18:16:41 UTC] WordPress database error Table 'wpdb.wp_cc_leads' doesn't exist for query SELECT * FROM wp_cc_leads ORDER BY created_at DESC made by do_action('toplevel_page_cc-leads'), WP_Hook->do_action, WP_Hook->apply_filters, cc_render_leads_page
+[10-Sep-2025 18:16:45 UTC] WordPress database error Table 'wpdb.wp_cc_leads' doesn't exist for query SELECT * FROM wp_cc_leads ORDER BY created_at DESC made by do_action('toplevel_page_cc-leads'), WP_Hook->do_action, WP_Hook->apply_filters, cc_render_leads_page
+[10-Sep-2025 18:17:05 UTC] WordPress database error Table 'wpdb.wp_cc_leads' doesn't exist for query SHOW FULL COLUMNS FROM `wp_cc_leads` made by do_action('wp_ajax_save_lead'), WP_Hook->do_action, WP_Hook->apply_filters, cc_save_lead
+[10-Sep-2025 18:17:26 UTC] WordPress database error Table 'wpdb.wp_cc_leads' doesn't exist for query SELECT * FROM wp_cc_leads ORDER BY created_at DESC made by do_action('toplevel_page_cc-leads'), WP_Hook->do_action, WP_Hook->apply_filters, cc_render_leads_page
+[10-Sep-2025 18:17:29 UTC] WordPress database error Table 'wpdb.wp_cc_leads' doesn't exist for query SELECT * FROM wp_cc_leads ORDER BY created_at DESC made by do_action('toplevel_page_cc-leads'), WP_Hook->do_action, WP_Hook->apply_filters, cc_render_leads_page
+[11-Sep-2025 04:44:07 UTC] PHP Deprecated:  Optional parameter $depth declared before required parameter $output is implicitly treated as a required parameter in /var/www/html/wp-content/themes/ant-preserved/functions.php on line 86
+[11-Sep-2025 04:59:00 UTC] PHP Parse error:  Unmatched ')' in /var/www/html/wp-content/plugins/credit-calculator/credit-calculator.php on line 144
+[11-Sep-2025 04:59:00 UTC] PHP Parse error:  Unmatched ')' in /var/www/html/wp-content/plugins/credit-calculator/credit-calculator.php on line 144
+[11-Sep-2025 07:02:31 UTC] PHP Warning:  wp_version_check(): Произошла непредвиденная ошибка. Возможно, что-то не так с сайтом WordPress.org или с настройками вашего сервера. Если проблема не решится, обратитесь на <a href="https://ru.wordpress.org/support/forums/">форумы поддержки</a>. (Не удалось установить защищённое соединение с WordPress.org. Пожалуйста, свяжитесь с администратором сервера.) in /var/www/html/wp-includes/functions.php on line 6121
+[11-Sep-2025 07:03:52 UTC] PHP Warning:  Undefined array key "cc_rate" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 80
+[11-Sep-2025 07:03:52 UTC] PHP Warning:  Undefined array key "cc_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 81
+[11-Sep-2025 07:03:52 UTC] PHP Warning:  Undefined array key "cc_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 82
+[11-Sep-2025 07:03:52 UTC] PHP Warning:  Undefined array key "cc_term_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 83
+[11-Sep-2025 07:03:52 UTC] PHP Warning:  Undefined array key "cc_term_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 84
+[11-Sep-2025 07:04:33 UTC] PHP Warning:  Undefined array key "cc_rate" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 80
+[11-Sep-2025 07:04:34 UTC] PHP Warning:  Undefined array key "cc_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 81
+[11-Sep-2025 07:04:34 UTC] PHP Warning:  Undefined array key "cc_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 82
+[11-Sep-2025 07:04:34 UTC] PHP Warning:  Undefined array key "cc_term_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 83
+[11-Sep-2025 07:04:34 UTC] PHP Warning:  Undefined array key "cc_term_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 84
+[11-Sep-2025 07:04:40 UTC] PHP Warning:  Undefined array key "cc_rate" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 80
+[11-Sep-2025 07:04:40 UTC] PHP Warning:  Undefined array key "cc_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 81
+[11-Sep-2025 07:04:40 UTC] PHP Warning:  Undefined array key "cc_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 82
+[11-Sep-2025 07:04:40 UTC] PHP Warning:  Undefined array key "cc_term_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 83
+[11-Sep-2025 07:04:40 UTC] PHP Warning:  Undefined array key "cc_term_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 84
+[11-Sep-2025 07:05:41 UTC] PHP Warning:  Undefined array key "cc_rate" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 80
+[11-Sep-2025 07:05:41 UTC] PHP Warning:  Undefined array key "cc_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 81
+[11-Sep-2025 07:05:41 UTC] PHP Warning:  Undefined array key "cc_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 82
+[11-Sep-2025 07:05:41 UTC] PHP Warning:  Undefined array key "cc_term_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 83
+[11-Sep-2025 07:05:41 UTC] PHP Warning:  Undefined array key "cc_term_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 84
+[11-Sep-2025 07:06:00 UTC] PHP Warning:  Undefined array key "cc_rate" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 80
+[11-Sep-2025 07:06:00 UTC] PHP Warning:  Undefined array key "cc_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 81
+[11-Sep-2025 07:06:00 UTC] PHP Warning:  Undefined array key "cc_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 82
+[11-Sep-2025 07:06:00 UTC] PHP Warning:  Undefined array key "cc_term_min" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 83
+[11-Sep-2025 07:06:00 UTC] PHP Warning:  Undefined array key "cc_term_max" in /var/www/html/wp-content/plugins/credit-calculator/includes/products-cpt.php on line 84
+[11-Sep-2025 15:41:32 UTC] PHP Deprecated:  Optional parameter $depth declared before required parameter $output is implicitly treated as a required parameter in /var/www/html/wp-content/themes/ant-preserved/functions.php on line 86

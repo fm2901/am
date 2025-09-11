@@ -1,15 +1,29 @@
 <?php
 // Регистрируем кастомный тип записи "Кредитные продукты"
 add_action('init', function() {
+    $labels = [
+        'name'               => __('Кредитные продукты', 'credit-calculator'),
+        'singular_name'      => __('Кредитный продукт', 'credit-calculator'),
+        'add_new'            => __('Добавить продукт', 'credit-calculator'),
+        'add_new_item'       => __('Добавить новый продукт', 'credit-calculator'),
+        'edit_item'          => __('Редактировать продукт', 'credit-calculator'),
+        'new_item'           => __('Новый продукт', 'credit-calculator'),
+        'all_items'          => __('Все продукты', 'credit-calculator'),
+        'view_item'          => __('Просмотр продукта', 'credit-calculator'),
+        'search_items'       => __('Поиск продукта', 'credit-calculator'),
+        'not_found'          => __('Продукты не найдены', 'credit-calculator'),
+        'not_found_in_trash' => __('В корзине продуктов нет', 'credit-calculator'),
+        'menu_name'          => __('Кредитные продукты', 'credit-calculator')
+    ];
+
     register_post_type('credit_product', [
-        'labels' => [
-            'name'          => __('Кредитные продукты', 'credit-calculator'),
-            'singular_name' => __('Кредитный продукт', 'credit-calculator')
-        ],
-        'public' => false,
-        'show_ui' => true,
-        'menu_icon' => 'dashicons-calculator',
-        'supports' => ['title'],
+        'labels' => $labels,
+        'public' => true,
+        'menu_icon' => 'dashicons-bank',
+        'supports' => ['title', 'editor', 'thumbnail'], // ← добавили описание и картинку
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'credit-products'],
+        'show_in_rest' => true, // поддержка Гутенберга и API
     ]);
 });
 

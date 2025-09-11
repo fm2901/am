@@ -1,39 +1,48 @@
-/* Общий контейнер */
-.cc-calculator-wrapper {
-    display: flex;
-    justify-content: center;
+.cc-calculator-wide {
+    background: #f5f9fc;
+    border-radius: 12px;
+    padding: 30px;
     margin: 40px 0;
 }
 
-.cc-card {
-    background: #f5f9fc;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    width: 100%;
+.cc-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-/* Заголовок */
+.cc-left {
+    flex: 2;
+}
+
+.cc-right {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
 .cc-title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     margin-bottom: 20px;
     color: #1c3553;
 }
 
-/* Формы */
 .cc-form-group {
     margin-bottom: 20px;
 }
 
-.cc-form-group label {
-    font-weight: 500;
-    display: block;
-    margin-bottom: 6px;
+.cc-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .cc-input {
-    width: 100%;
+    flex: 1;
     padding: 10px 12px;
     border: 1px solid #d1dbe8;
     border-radius: 8px;
@@ -45,38 +54,49 @@
     margin-top: 8px;
 }
 
-/* Результат */
-.cc-result {
-    background: #fff;
-    border: 1px solid #d1dbe8;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    margin: 20px 0;
+.cc-hints {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
 }
 
-.cc-result p {
-    margin: 0;
-    font-weight: 600;
+.cc-approve {
+    margin-bottom: 20px;
+}
+
+.cc-approve-value {
+    font-size: 20px;
+    font-weight: 700;
     color: #1c3553;
 }
 
-.cc-monthly {
-    font-size: 22px;
-    color: #00843d;
-    font-weight: 700;
-    margin-top: 8px;
+.cc-approve-value small {
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
 }
 
-/* Кнопка */
+.cc-result {
+    margin-bottom: 20px;
+}
+
+.cc-monthly {
+    font-size: 24px;
+    font-weight: 700;
+    color: #00843d;
+}
+
 .cc-btn {
     background: #00843d;
     color: #fff;
     border: none;
-    padding: 12px 20px;
+    padding: 14px 22px;
     border-radius: 12px;
     font-size: 16px;
     cursor: pointer;
+    width: 100%;
     transition: 0.3s;
 }
 
@@ -84,7 +104,6 @@
     background: #006c31;
 }
 
-/* Модалка */
 .cc-modal {
     display: none;
     position: fixed;
@@ -96,31 +115,230 @@
     align-items: center;
 }
 
-.cc-modal-content {
-    background: #fff;
+/* Общий контейнер */
+.cc-calculator-box {
+    background: #f0f6fa;
+    border-radius: 12px;
     padding: 30px;
-    border-radius: 16px;
-    max-width: 400px;
-    width: 100%;
-    position: relative;
+    margin: 40px 0;
 }
 
-.cc-modal h3 {
-    margin-top: 0;
-    font-size: 18px;
-    margin-bottom: 15px;
+.cc-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.cc-left {
+    flex: 2;
+}
+
+.cc-right {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Заголовок */
+.cc-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
     color: #1c3553;
 }
 
+.cc-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.cc-approve {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1c3553;
+    margin: 5px 0 20px 0;
+}
+
+.cc-approve .cc-note {
+    font-size: 12px;
+    font-weight: normal;
+    color: #888;
+    margin-left: 6px;
+}
+
+.cc-monthly {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00843d;
+    margin: 5px 0 20px 0;
+}
+
+/* Формы */
+.cc-form-row {
+    display: flex;
+    gap: 30px;
+}
+
+.cc-form-group {
+    flex: 1;
+}
+
+.cc-form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+    color: #1c3553;
+}
+
+.cc-input-wrap {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #d1dbe8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cc-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #1c3553;
+}
+
+.cc-suffix {
+    padding: 0 12px;
+    font-size: 14px;
+    color: #666;
+    background: #f9fbfd;
+    border-left: 1px solid #d1dbe8;
+}
+
+.cc-range {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.cc-hints {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Кнопка */
+.cc-btn {
+    background: #00843d;
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.cc-btn:hover {
+    background: #006c31;
+}
+
+#cc-product {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Фон */
+.cc-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Контент */
+.cc-modal-content {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    position: relative;
+    animation: ccFadeIn 0.3s ease-out;
+}
+
+/* Заголовок */
+.cc-modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1c3553;
+    text-align: center;
+}
+
+/* Кнопка закрытия */
 .cc-modal-close {
     position: absolute;
-    top: 12px;
-    right: 16px;
-    font-size: 20px;
+    top: 14px;
+    right: 18px;
+    font-size: 24px;
     cursor: pointer;
     color: #999;
+    transition: 0.2s;
 }
 
 .cc-modal-close:hover {
     color: #333;
+}
+
+/* Поля формы */
+.cc-modal .cc-form-group {
+    margin-bottom: 18px;
+}
+
+.cc-modal .cc-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1dbe8;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.cc-modal .cc-input:focus {
+    border-color: #00843d;
+    box-shadow: 0 0 0 3px rgba(0,132,61,0.1);
+    outline: none;
+}
+
+/* Кнопка */
+.cc-modal .cc-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+/* Анимация появления */
+@keyframes ccFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

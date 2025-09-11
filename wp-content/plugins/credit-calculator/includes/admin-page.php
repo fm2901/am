@@ -22,6 +22,55 @@ add_action('admin_menu', function(){
     );
 });
 
+add_action('admin_menu', function(){
+    add_menu_page(
+        __('Лиды', 'credit-calculator'),
+        __('Лиды', 'credit-calculator'),
+        'manage_options',
+        'cc-leads',
+        'cc_render_leads_page',
+        'dashicons-list-view',
+        26
+    );
+});
+
+function cc_render_leads_page() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'cc_leads';
+    $leads = $wpdb->get_results("SELECT * FROM $table_name ORDER BY created_at DESC");
+
+    echo '<div class="wrap"><h1>' . __('Лиды', 'credit-calculator') . '</h1>';
+    echo '<table class="widefat fixed striped">';
+    echo '<thead><tr>
+            <th>ID</th>
+            <th>' . __('Тип', 'credit-calculator') . '</th>
+            <th>' . __('Имя', 'credit-calculator') . '</th>
+            <th>' . __('Телефон', 'credit-calculator') . '</th>
+            <th>' . __('Город', 'credit-calculator') . '</th>
+            <th>' . __('Продукт', 'credit-calculator') . '</th>
+            <th>' . __('Сумма', 'credit-calculator') . '</th>
+            <th>' . __('Срок', 'credit-calculator') . '</th>
+            <th>' . __('Дата', 'credit-calculator') . '</th>
+          </tr></thead><tbody>';
+
+    foreach ($leads as $lead) {
+        echo '<tr>';
+        echo '<td>' . esc_html($lead->id) . '</td>';
+        echo '<td>' . esc_html($lead->lead_type) . '</td>';
+        echo '<td>' . esc_html($lead->name) . '</td>';
+        echo '<td>' . esc_html($lead->phone) . '</td>';
+        echo '<td>' . esc_html($lead->city) . '</td>';
+        echo '<td>' . esc_html(get_the_title($lead->product)) . '</td>';
+        echo '<td>' . esc_html($lead->amount) . '</td>';
+        echo '<td>' . esc_html($lead->term) . '</td>';
+        echo '<td>' . esc_html($lead->created_at) . '</td>';
+        echo '</tr>';
+    }
+
+    echo '</tbody></table></div>';
+}
+
+
 // Установка таблицы лидов при активации плагина
 function cc_create_table() {
     global $wpdb;
