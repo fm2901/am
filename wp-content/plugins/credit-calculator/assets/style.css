@@ -352,6 +352,7 @@
     .cc-left,
     .cc-right {
         flex: 1 1 100%;
+        width: 100%;
     }
     .cc-calculator-wide,
     .cc-calculator-box {
