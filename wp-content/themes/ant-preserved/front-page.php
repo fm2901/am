@@ -2,16 +2,9 @@
     <?php echo do_shortcode('[azizi_slider]'); ?>
     <?php echo do_shortcode('[azizi_quick_actions]'); ?>
     <?php echo do_shortcode('[azizi_recommended title="Рекомендуемые продукты" limit="8"]'); ?>
-    <section class="_section_g5z7t_1 __fullWidth_g5z7t_9">
-        <iframe
-                src="https://www.google.com/maps/d/u/0/embed?mid=1oIcAea3BTLe72lZSOrDm0ZILsH85i0Fm&ehbc=2E312F"
-                style="border:0; width:100vw; height:50vh;"
-                allowfullscreen=""
-                loading="lazy">
-        </iframe>
-    </section>
     <?php echo do_shortcode('[azizi_news]'); ?>
     <?php echo do_shortcode('[azizi_rates_widget]'); ?>
+    <?php echo do_shortcode('[azizi_deposit_calculator]'); ?>
     <?php echo do_shortcode('[credit_calculator]'); ?>
     <section class="_section_crtk2_1">
     <div class="_content_crtk2_8">

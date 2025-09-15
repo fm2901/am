@@ -6,7 +6,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Deposit Calculator"
-msgstr "Калькулятори пасандоз"
+msgstr "Ҳисобкунаки пасандоз"
 
 msgid "Deposit amount"
 msgstr "Маблағи пасандоз"
@@ -39,10 +39,28 @@ msgid "Accrual schedule"
 msgstr "Ҷадвали ҳисоб"
 
 msgid "Balance"
-msgstr "Боќимонда"
+msgstr "Боқимонда"
 
 msgid "mo."
 msgstr "моҳ"
 
 msgid "somoni"
 msgstr "сомонӣ"
+
+msgid "Открыть вклад"
+msgstr "Кушодани амонат"
+
+msgid "Ваше имя"
+msgstr "Номи шумо"
+
+msgid "Телефон"
+msgstr "Телефон"
+
+msgid "Город"
+msgstr "Шаҳр"
+
+msgid "Сумма вклада"
+msgstr "Маблағи амонат"
+
+msgid "Срок вклада"
+msgstr "Мӯҳлати амонат"

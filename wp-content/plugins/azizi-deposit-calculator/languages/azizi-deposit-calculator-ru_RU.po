@@ -6,7 +6,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 
 msgid "Deposit Calculator"
-msgstr "Калькулятор вкладов"
+msgstr "Калькулятор вклада"
 
 msgid "Deposit amount"
 msgstr "Сумма вклада"
@@ -15,7 +15,7 @@ msgid "Term"
 msgstr "Срок"
 
 msgid "Rate"
-msgstr "Процентная ставка"
+msgstr "Ставка"
 
 msgid "Capitalization"
 msgstr "Капитализация"
@@ -33,7 +33,7 @@ msgid "Profit"
 msgstr "Доход"
 
 msgid "Total amount"
-msgstr "Итоговая сумма"
+msgstr "Итого"
 
 msgid "Accrual schedule"
 msgstr "График начислений"
@@ -45,4 +45,22 @@ msgid "mo."
 msgstr "мес."
 
 msgid "somoni"
-msgstr "сомон"
+msgstr "сомони"
+
+msgid "Открыть вклад"
+msgstr "Открыть вклад"
+
+msgid "Ваше имя"
+msgstr "Ваше имя"
+
+msgid "Телефон"
+msgstr "Телефон"
+
+msgid "Город"
+msgstr "Город"
+
+msgid "Сумма вклада"
+msgstr "Сумма вклада"
+
+msgid "Срок вклада"
+msgstr "Срок вклада"

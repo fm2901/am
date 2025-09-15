@@ -342,3 +342,41 @@
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+    .cc-container,
+    .cc-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .cc-left,
+    .cc-right {
+        flex: 1 1 100%;
+    }
+    .cc-calculator-wide,
+    .cc-calculator-box {
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
+@media (max-width: 480px) {
+    .cc-calculator-wide,
+    .cc-calculator-box {
+        padding: 12px;
+    }
+    .cc-title {
+        font-size: 18px;
+    }
+    .cc-monthly {
+        font-size: 22px;
+    }
+    .cc-form-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #cc-product {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #dae3ec;
+    }
+}

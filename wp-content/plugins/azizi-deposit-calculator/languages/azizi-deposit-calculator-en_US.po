@@ -15,7 +15,7 @@ msgid "Term"
 msgstr "Term"
 
 msgid "Rate"
-msgstr "Rate"
+msgstr "Interest rate"
 
 msgid "Capitalization"
 msgstr "Capitalization"
@@ -46,3 +46,21 @@ msgstr "mo."
 
 msgid "somoni"
 msgstr "somoni"
+
+msgid "Открыть вклад"
+msgstr "Open deposit"
+
+msgid "Ваше имя"
+msgstr "Your name"
+
+msgid "Телефон"
+msgstr "Phone"
+
+msgid "Город"
+msgstr "City"
+
+msgid "Сумма вклада"
+msgstr "Deposit amount"
+
+msgid "Срок вклада"
+msgstr "Deposit term"

@@ -11,6 +11,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+require_once plugin_dir_path(__FILE__) . 'includes/save-lead.php';
+
 /** ---------- i18n ---------- */
 add_action('plugins_loaded', function() {
     load_plugin_textdomain('azizi-deposit-calculator', false, dirname(plugin_basename(__FILE__)) . '/languages');
@@ -23,6 +25,23 @@ function azizi_deposit_enqueue_assets(){
     wp_register_script('azizi-deposit-calculator', plugins_url('assets/deposit.js', __FILE__), array(), $ver, true);
 }
 add_action('wp_enqueue_scripts', 'azizi_deposit_enqueue_assets');
+
+function azizi_deposit_enqueue_scripts() {
+    wp_enqueue_script(
+        'azizi-deposit-js',
+        plugin_dir_url(__FILE__) . 'assets/js/deposit.js',
+        ['jquery'],
+        '1.0.1',
+        true
+    );
+
+    // Пробрасываем ajaxurl в JS
+    wp_localize_script('azizi-deposit-js', 'aziziDeposit', [
+        'ajaxurl' => admin_url('admin-ajax.php'),
+    ]);
+}
+add_action('wp_enqueue_scripts', 'azizi_deposit_enqueue_scripts');
+
 
 /** ---------- Shortcode ---------- */
 function azizi_deposit_render_shortcode($atts = array()){
@@ -92,6 +111,9 @@ function azizi_deposit_render_shortcode($atts = array()){
                         <span><?php echo esc_html(__('Total amount', 'azizi-deposit-calculator')); ?></span>
                         <strong><span class="js-dep-total">—</span> <?php echo esc_html($atts['currency']); ?></strong>
                     </div>
+                    <button class="cc-btn" id="open-deposit-modal">
+                        <?php _e('Открыть вклад', 'azizi-deposit-calculator'); ?>
+                    </button>
                 </div>
                 <div class="azizi-schedule">
                     <h4><?php echo esc_html(__('Accrual schedule', 'azizi-deposit-calculator')); ?></h4>
@@ -107,7 +129,44 @@ function azizi_deposit_render_shortcode($atts = array()){
             </div>
         </div>
     </div>
+    <div class="cc-modal" id="deposit-modal">
+        <div class="cc-modal-content">
+            <span class="cc-modal-close">&times;</span>
+            <h3><?php _e("Открыть вклад", "azizi-deposit-calculator"); ?></h3>
+            <form id="deposit-lead-form">
+                <input type="hidden" name="action" value="save_deposit_lead">
+                <input type="hidden" name="lead_type" value="deposit">
+
+                <div class="cc-form-group">
+                    <label><?php _e("Ваше имя", "azizi-deposit-calculator"); ?></label>
+                    <input type="text" name="name" class="cc-input" required>
+                </div>
+                <div class="cc-form-group">
+                    <label><?php _e("Телефон", "azizi-deposit-calculator"); ?></label>
+                    <input type="text" name="phone" class="cc-input" required>
+                </div>
+                <div class="cc-form-group">
+                    <label><?php _e("Город", "azizi-deposit-calculator"); ?></label>
+                    <input type="text" name="city" class="cc-input">
+                </div>
+                <div class="cc-form-group">
+                    <label><?php _e("Сумма вклада", "azizi-deposit-calculator"); ?></label>
+                    <input type="number" id="lead-deposit-amount" name="desired_amount" readonly>
+                </div>
+                <div class="cc-form-group">
+                    <label><?php _e("Срок вклада", "azizi-deposit-calculator"); ?></label>
+                    <input type="number" id="lead-deposit-term" name="desired_term" readonly>
+                </div>
+
+                <button type="submit" class="cc-btn"><?php _e("Открыть вклад", "azizi-deposit-calculator"); ?></button>
+            </form>
+
+        </div>
+    </div>
+
     <?php
     return ob_get_clean();
 }
 add_shortcode('azizi_deposit_calculator', 'azizi_deposit_render_shortcode');
+
+

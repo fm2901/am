@@ -13,7 +13,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 add_action('wp_enqueue_scripts', function(){
     wp_enqueue_style('credit-calculator-style', plugins_url('/assets/style.css', __FILE__));
     wp_enqueue_script('credit-calculator-script', plugins_url('/assets/script.js', __FILE__), ['jquery'], false, true);
-    wp_localize_script('credit-calculator-script', 'cc_ajax', ['url' => admin_url('admin-ajax.php')]);
+    wp_localize_script('credit-calculator-script', 'cc_ajax', [
+        'url'      => admin_url('admin-ajax.php'),
+        'i18n'     => [
+            'from'     => __('от', 'credit-calculator'),
+            'to'       => __('до', 'credit-calculator'),
+            'months'   => __('мес.', 'credit-calculator'),
+            'success'  => __('Заявка успешно отправлена!', 'credit-calculator'),
+            'error'    => __('Ошибка при отправке заявки. Попробуйте позже.', 'credit-calculator'),
+        ]
+    ]);
+
 });
 
 add_action('plugins_loaded', function() {
@@ -79,8 +89,8 @@ add_shortcode('credit_calculator', function(){
                         </div>
                         <input type="range" id="cc-amount-range" class="cc-range" step="500">
                         <div class="cc-hints">
-                            <span id="cc-amount-min">от 0</span>
-                            <span id="cc-amount-max">до 0</span>
+                            <span id="cc-amount-min"><?php _e("от", "credit-calculator"); ?> 0</span>
+                            <span id="cc-amount-max"><?php _e("до", "credit-calculator"); ?> 0</span>
                         </div>
                     </div>
 
@@ -110,7 +120,7 @@ add_shortcode('credit_calculator', function(){
                 <p class="cc-monthly"><span id="monthly">0</span> TJS</p>
 
                 <button type="button" id="open-modal" class="cc-btn">
-                    <?php _e("Оформить заказ", "credit-calculator"); ?>
+                    <?php _e("Оформить кредит", "credit-calculator"); ?>
                 </button>
             </div>
 

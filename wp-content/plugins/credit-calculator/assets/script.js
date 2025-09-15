@@ -45,16 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
         amountRange.min = min;
         amountRange.max = max;
         amountRange.value = min;
-        amountMinLabel.textContent = "от " + min;
-        amountMaxLabel.textContent = "до " + max;
+        amountMinLabel.textContent = cc_ajax.i18n.from + " " + min;
+        amountMaxLabel.textContent = cc_ajax.i18n.to + " " + max;
 
         // срок
         termRange.min = termMin;
         termRange.max = termMax;
         termRange.value = termMin;
         termValue.value = termMin; // ← исправлено на .value
-        termMinLabel.textContent = "от " + termMin + " мес.";
-        termMaxLabel.textContent = "до " + termMax + " мес.";
+        termMinLabel.textContent = cc_ajax.i18n.from + " " + termMin + " " + cc_ajax.i18n.months;
+        termMaxLabel.textContent = cc_ajax.i18n.to + " " + termMax + " " + cc_ajax.i18n.months;
 
         recalc();
     }

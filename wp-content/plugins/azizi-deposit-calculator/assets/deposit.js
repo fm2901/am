@@ -1,5 +1,8 @@
 (function(){
-    function format(num){ if (isNaN(num)) return '—'; return new Intl.NumberFormat('ru-RU').format(Math.round(num)); }
+    function format(num){
+        if (isNaN(num)) return '—';
+        return new Intl.NumberFormat('ru-RU').format(Math.round(num));
+    }
 
     function calcDeposit(amount, months, rate, cap){
         var balance = amount;
@@ -69,6 +72,84 @@
         render();
     }
 
-    function initAll(){ document.querySelectorAll('.azizi-deposit-wrapper').forEach(initOne); }
-    if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',initAll);} else{initAll();}
+    function initAll(){
+        document.querySelectorAll('.azizi-deposit-wrapper').forEach(initOne);
+    }
+
+    if(document.readyState==='loading'){
+        document.addEventListener('DOMContentLoaded',initAll);
+    } else {
+        initAll();
+    }
+
+    // === ДОРАБОТКА: модалка для лида ===
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("deposit-modal");
+        const openBtn = document.getElementById("open-deposit-modal");
+        if(!modal || !openBtn) return;
+
+        const closeBtn = modal.querySelector(".cc-modal-close");
+        const leadForm = document.getElementById("deposit-lead-form");
+
+        // открыть и подставить сумму + срок
+        openBtn.addEventListener("click", () => {
+            const amountField = document.querySelector(".js-dep-amount");
+            const termField = document.querySelector(".js-dep-term");
+
+            const amount = amountField ? amountField.value : "";
+            const term = termField ? termField.value : "";
+
+            // hidden для отправки
+            document.getElementById("lead-deposit-amount").value = amount;
+            document.getElementById("lead-deposit-term").value = term;
+
+            // отображение пользователю
+            const amountDisplay = document.getElementById("lead-deposit-amount-display");
+            const termDisplay = document.getElementById("lead-deposit-term-display");
+            if(amountDisplay) amountDisplay.value = amount;
+            if(termDisplay) termDisplay.value = term;
+
+            modal.style.display = "flex";
+        });
+
+        // закрыть крестиком
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        // закрыть по клику на фон
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // отправка формы
+        leadForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(leadForm);
+
+            // добавляем action вручную
+            formData.append("action", "save_deposit_lead");
+
+            fetch(cc_ajax.url, {
+                method: "POST",
+                body: formData,
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.data.message || "Спасибо! Ваша заявка отправлена.");
+                        modal.style.display = "none";
+                        leadForm.reset();
+                    } else {
+                        alert(data.data.message || "Ошибка при отправке заявки.");
+                    }
+                })
+                .catch(() => {
+                    alert("Ошибка соединения. Попробуйте позже.");
+                });
+        });
+    });
+
 })();
