@@ -4,7 +4,6 @@
     <?php echo do_shortcode('[azizi_recommended title="Рекомендуемые продукты" limit="8"]'); ?>
     <?php echo do_shortcode('[azizi_news]'); ?>
     <?php echo do_shortcode('[azizi_rates_widget]'); ?>
-    <?php echo do_shortcode('[azizi_deposit_calculator]'); ?>
     <?php echo do_shortcode('[credit_calculator]'); ?>
     <section class="_section_crtk2_1">
     <div class="_content_crtk2_8">
