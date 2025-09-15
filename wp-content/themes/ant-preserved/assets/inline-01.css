@@ -5384,3 +5384,9 @@ img,svg {
     transform: rotate(180deg);
 
 }
+
+@media screen and (max-width: 680px){
+    .footer-card-lead-form-wrapper {
+        display: none;
+    }
+}

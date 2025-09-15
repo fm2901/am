@@ -27,14 +27,6 @@ function azizi_deposit_enqueue_assets(){
 add_action('wp_enqueue_scripts', 'azizi_deposit_enqueue_assets');
 
 function azizi_deposit_enqueue_scripts() {
-    wp_enqueue_script(
-        'azizi-deposit-js',
-        plugin_dir_url(__FILE__) . 'assets/js/deposit.js',
-        ['jquery'],
-        '1.0.1',
-        true
-    );
-
     // Пробрасываем ajaxurl в JS
     wp_localize_script('azizi-deposit-js', 'aziziDeposit', [
         'ajaxurl' => admin_url('admin-ajax.php'),

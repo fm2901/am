@@ -46,7 +46,9 @@
                         </svg>
                     </a></li>
             </ul>
-            <button class="sl-button _primary_pubuv_31" type="button"><a href="#">Заказать карту</a></button>
+            <div class="footer-card-lead-form-wrapper">
+                <?php echo do_shortcode('[card_lead_form]'); ?>
+            </div>
         </div>
     </div>
     <div class="_footerBottom_17w3r_94">

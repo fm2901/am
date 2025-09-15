@@ -281,6 +281,7 @@ function cc_install_table() {
         name VARCHAR(255) NOT NULL,
         phone VARCHAR(50) NOT NULL,
         city VARCHAR(100),
+        card_name varchar(255) NOT NULL,
         product BIGINT(20) UNSIGNED,
         amount INT,
         term INT,

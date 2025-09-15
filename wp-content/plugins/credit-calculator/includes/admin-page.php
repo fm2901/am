@@ -47,6 +47,7 @@ function cc_render_leads_page() {
             <th>' . __('Имя', 'credit-calculator') . '</th>
             <th>' . __('Телефон', 'credit-calculator') . '</th>
             <th>' . __('Город', 'credit-calculator') . '</th>
+            <th>' . __('Имя на карте', 'credit-calculator') . '</th>
             <th>' . __('Продукт', 'credit-calculator') . '</th>
             <th>' . __('Сумма', 'credit-calculator') . '</th>
             <th>' . __('Срок', 'credit-calculator') . '</th>
@@ -60,6 +61,7 @@ function cc_render_leads_page() {
         echo '<td>' . esc_html($lead->name) . '</td>';
         echo '<td>' . esc_html($lead->phone) . '</td>';
         echo '<td>' . esc_html($lead->city) . '</td>';
+        echo '<td>' . esc_html($lead->card_name) . '</td>';
         echo '<td>' . esc_html(get_the_title($lead->product)) . '</td>';
         echo '<td>' . esc_html($lead->amount) . '</td>';
         echo '<td>' . esc_html($lead->term) . '</td>';

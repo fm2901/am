@@ -1,0 +1,20 @@
+msgid "Заказать карту"
+msgstr "Order a Card"
+
+msgid "ФИО"
+msgstr "Full Name"
+
+msgid "Номер телефона"
+msgstr "Phone Number"
+
+msgid "Город"
+msgstr "City"
+
+msgid "Имя на карте (латиницей)"
+msgstr "Name on Card (Latin)"
+
+msgid "Заказать"
+msgstr "Order"
+
+msgid "Заявка успешно отправлена!"
+msgstr "Application successfully submitted!"

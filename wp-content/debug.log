@@ -140,3 +140,39 @@
 [15-Sep-2025 09:54:12 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>azizi-deposit-calculator</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /var/www/html/wp-includes/functions.php on line 6121
 [15-Sep-2025 09:54:50 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>azizi-deposit-calculator</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /var/www/html/wp-includes/functions.php on line 6121
 [15-Sep-2025 09:56:51 UTC] PHP Notice:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>azizi-deposit-calculator</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in /var/www/html/wp-includes/functions.php on line 6121
+[15-Sep-2025 15:42:31 UTC] PHP Deprecated:  Optional parameter $depth declared before required parameter $output is implicitly treated as a required parameter in /var/www/html/wp-content/themes/ant-preserved/functions.php on line 86
+[15-Sep-2025 16:16:06 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:16:07 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:16:08 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:16:10 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:16:10 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:17:48 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:18:07 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:19:16 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:19:17 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:19:49 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:20:07 UTC] PHP Fatal error:  Cannot redeclare cc_save_lead() (previously declared in /var/www/html/wp-content/plugins/card-lead-form/includes/save-lead.php:5) in /var/www/html/wp-content/plugins/credit-calculator/includes/save-lead.php on line 5
+[15-Sep-2025 16:20:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function save_card_lead() in /var/www/html/wp-content/plugins/card-lead-form/card-lead-form.php:81
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(324): CardLeadForm->handle_form('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-admin/admin-ajax.php(192): do_action('wp_ajax_submit_...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/card-lead-form/card-lead-form.php on line 81
+[15-Sep-2025 16:21:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function save_card_lead() in /var/www/html/wp-content/plugins/card-lead-form/card-lead-form.php:81
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(324): CardLeadForm->handle_form('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-admin/admin-ajax.php(192): do_action('wp_ajax_submit_...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/card-lead-form/card-lead-form.php on line 81
+[15-Sep-2025 16:23:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function save_card_lead() in /var/www/html/wp-content/plugins/card-lead-form/card-lead-form.php:81
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(324): CardLeadForm->handle_form('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-admin/admin-ajax.php(192): do_action('wp_ajax_submit_...')
+#4 {main}
+  thrown in /var/www/html/wp-content/plugins/card-lead-form/card-lead-form.php on line 81

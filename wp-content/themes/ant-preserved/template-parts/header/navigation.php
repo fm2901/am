@@ -43,7 +43,8 @@
                     </defs>
                 </svg>
             </button>
-            <button class="sl-button _primary_pubuv_31" type="button"><a href="<?php echo esc_url( get_page_url_by_slug('/заказать-карту/') ); ?>"><?php _e('Заказать карту', 'azizi-main'); ?></a></button>
+<!--            <button class="sl-button _primary_pubuv_31" type="button"><a href="--><?php //echo esc_url( get_page_url_by_slug('/заказать-карту/') ); ?><!--">--><?php //_e('Заказать карту', 'azizi-main'); ?><!--</a></button>-->
+            <?php echo do_shortcode('[card_lead_form]'); ?>
             <button class="burger" type="button">
                 <span></span>
                 <span></span>
