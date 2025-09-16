@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Credit Calculator\n"
+"Language: tj\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: ChatGPT\n"
+
+#: includes/admin-page.php
+msgid "Кредитный калькулятор"
+msgstr "Ҳисобкунаки қарз"
+
+msgid "Цель кредита"
+msgstr "Мақсади қарз"
+
+msgid "Сумма кредита"
+msgstr "Маблағи қарз"
+
+msgid "Срок кредита"
+msgstr "Мӯҳлати қарз"
+
+msgid "мес."
+msgstr "моҳ"
+
+msgid "Вероятность одобрения кредита"
+msgstr "Эҳтимолияти тасдиқи қарз"
+
+msgid "за заполнение заявки"
+msgstr "барои пур кардани дархост"
+
+msgid "Ежемесячный платёж"
+msgstr "Пардохти моҳона"
+
+msgid "Оформить кредит"
+msgstr "Дархости қарз"
+
+msgid "Оставьте заявку"
+msgstr "Дархост гузоред"
+
+msgid "Выберите продукт"
+msgstr "Маҳсулотро интихоб кунед"
+
+msgid "Желаемая сумма кредита"
+msgstr "Маблағи дилхоҳи қарз"
+
+msgid "Желаемый срок кредита"
+msgstr "Мӯҳлати дилхоҳи қарз"
+
+msgid "Ваше имя"
+msgstr "Номи шумо"
+
+msgid "Телефон"
+msgstr "Телефон"
+
+msgid "Город"
+msgstr "Шаҳр"
+
+msgid "Отправить"
+msgstr "Фиристодан"
+
+msgid "Продукты не найдены"
+msgstr "Маҳсулот ёфт нашуд"
+
+msgid "Ставка"
+msgstr "Меъёр"
+
+msgid "Сумма"
+msgstr "Маблағ"
+
+msgid "Срок"
+msgstr "Мӯҳлат"
+
+msgid "Подробнее"
+msgstr "Маълумоти бештар"
+
+msgid "Кредитные продукты"
+msgstr "Маҳсулоти қарзӣ"
+
+msgid "Кредитный продукт"
+msgstr "Маҳсулоти қарзӣ"
+
+msgid "Добавить продукт"
+msgstr "Илова кардани маҳсулот"
+
+msgid "Добавить новый продукт"
+msgstr "Илова кардани маҳсулоти нав"
+
+msgid "Редактировать продукт"
+msgstr "Таҳрири маҳсулот"
+
+msgid "Новый продукт"
+msgstr "Маҳсулоти нав"
+
+msgid "Все продукты"
+msgstr "Ҳамаи маҳсулот"
+
+msgid "Просмотр продукта"
+msgstr "Намоиши маҳсулот"
+
+msgid "Поиск продукта"
+msgstr "Ҷустуҷӯи маҳсулот"
+
+msgid "Продукты не найдены"
+msgstr "Маҳсулот ёфт нашуд"
+
+msgid "В корзине продуктов нет"
+msgstr "Дар сабад маҳсулот нест"
+
+msgid "Меню"
+msgstr "Меню"
+
+msgid "от"
+msgstr "аз"
+
+msgid "до"
+msgstr "то"
+
+msgid "мес."
+msgstr "моҳ"
+

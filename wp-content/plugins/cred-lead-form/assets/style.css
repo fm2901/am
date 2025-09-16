@@ -1,0 +1,159 @@
+:root {
+    --azizi-primary: #16576C;
+    --azizi-accent: #ffcc00;
+    --azizi-bg: #f5f7fa;
+    --azizi-text: #333;
+    --azizi-success: #2e7d32;
+}
+
+/* ========== Обертка модалки ========== */
+.cred-lead-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.6);
+}
+
+.cred-lead-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--azizi-text);
+    animation: fadeIn 0.3s ease;
+}
+
+.cred-lead-close {
+    float: right;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--azizi-primary);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.cred-lead-close:hover {
+    color: var(--azizi-accent);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to   {opacity: 1; transform: translateY(0);}
+}
+
+/* ========== Заголовок формы ========== */
+.cred-lead-content .azizi-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--azizi-primary);
+    text-align: center;
+}
+
+/* ========== Поля формы ========== */
+.azizi-field {
+    margin-bottom: 18px;
+}
+
+.azizi-labels {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--azizi-primary);
+}
+
+.azizi-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: var(--azizi-bg);
+}
+
+.azizi-input:focus {
+    border-color: var(--azizi-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22, 87, 108, 0.2);
+}
+
+/* ========== Кнопка отправки ========== */
+.azizi-btn {
+    display: inline-block;
+    background: var(--azizi-primary);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.azizi-btn:hover {
+    background: var(--azizi-accent);
+    color: var(--azizi-primary);
+}
+
+/* ========== Сообщения ========== */
+.cred-lead-success {
+    background: var(--azizi-success);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cred-lead-error {
+    background: #c62828;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cred-lead-open {
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 9px 15px;
+    transition: background-color .2s
+    ease 0s, border-color .2s
+    ease 0s, color .2s
+    ease 0s;
+    background-color: var(--azizi-primary);
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .cred-lead-open {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+        border-radius: 6px;
+    }
+}

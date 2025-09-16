@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Credit Calculator\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Кредитный калькулятор"
+msgstr "Loan Calculator"
+
+msgid "Цель кредита"
+msgstr "Loan Purpose"
+
+msgid "Сумма кредита"
+msgstr "Loan Amount"
+
+msgid "Срок кредита"
+msgstr "Loan Term"
+
+msgid "мес."
+msgstr "months"
+
+msgid "Вероятность одобрения кредита"
+msgstr "Loan Approval Probability"
+
+msgid "за заполнение заявки"
+msgstr "for filling out the application"
+
+msgid "Ежемесячный платёж"
+msgstr "Monthly Payment"
+
+msgid "Оформить кредит"
+msgstr "Apply for Loan"
+
+msgid "Оставьте заявку"
+msgstr "Leave an Application"
+
+msgid "Выберите продукт"
+msgstr "Choose a Product"
+
+msgid "Желаемая сумма кредита"
+msgstr "Desired Loan Amount"
+
+msgid "Желаемый срок кредита"
+msgstr "Desired Loan Term"
+
+msgid "Ваше имя"
+msgstr "Your Name"
+
+msgid "Телефон"
+msgstr "Phone"
+
+msgid "Город"
+msgstr "City"
+
+msgid "Отправить"
+msgstr "Submit"
+
+msgid "Продукты не найдены"
+msgstr "No Products Found"
+
+msgid "Ставка"
+msgstr "Rate"
+
+msgid "Сумма"
+msgstr "Amount"
+
+msgid "Срок"
+msgstr "Term"
+
+msgid "Подробнее"
+msgstr "More Details"
+
+msgid "Кредитные продукты"
+msgstr "Loan Products"
+
+msgid "Кредитный продукт"
+msgstr "Loan Product"
+
+msgid "Добавить продукт"
+msgstr "Add Product"
+
+msgid "Добавить новый продукт"
+msgstr "Add New Product"
+
+msgid "Редактировать продукт"
+msgstr "Edit Product"
+
+msgid "Новый продукт"
+msgstr "New Product"
+
+msgid "Все продукты"
+msgstr "All Products"
+
+msgid "Просмотр продукта"
+msgstr "View Product"
+
+msgid "Поиск продукта"
+msgstr "Search Product"
+
+msgid "В корзине продуктов нет"
+msgstr "No Products in Trash"
+
+msgid "Меню"
+msgstr "Menu"
+
+msgid "от"
+msgstr "from"
+
+msgid "до"
+msgstr "to"
+
+msgid "мес."
+msgstr "months"

@@ -1,10 +1,10 @@
 <?php get_header(); ?>
     <?php echo do_shortcode('[azizi_slider]'); ?>
     <?php echo do_shortcode('[azizi_quick_actions]'); ?>
-    <?php echo do_shortcode('[azizi_recommended title="Рекомендуемые продукты" limit="8"]'); ?>
-    <?php echo do_shortcode('[azizi_news]'); ?>
     <?php echo do_shortcode('[azizi_rates_widget]'); ?>
+    <?php echo do_shortcode('[azizi_recommended title="Рекомендуемые продукты" limit="8"]'); ?>
     <?php echo do_shortcode('[credit_calculator]'); ?>
+    <?php echo do_shortcode('[azizi_news]'); ?>
     <section class="_section_crtk2_1">
     <div class="_content_crtk2_8">
         <div class="_info_crtk2_16">

@@ -103,7 +103,7 @@ class AziziRecommended {
                 </div>
             </div>
 
-            <div class="azp-swiper" data-autoplay="4000" data-loop="true">
+            <div class="azp-swiper" data-autoplay="4000000" data-loop="true">
                 <div class="azp-wrapper">
                     <?php while ($q->have_posts()): $q->the_post();
                         $id = get_the_ID();
@@ -139,8 +139,9 @@ class AziziRecommended {
                                         </div>
                                     <?php endif; ?>
                                     <div class="azp-card__actions">
-                                        <?php if($btn1_lbl && $btn1_url): ?>
-                                            <a href="<?php echo esc_url($btn1_url); ?>" class="azp-btn azp-btn--primary"><?php echo esc_html($btn1_lbl); ?></a>
+                                        <?php if($btn1_lbl): ?>
+                                            <?php echo do_shortcode($btn1_lbl); ?>
+<!--                                            <a href="--><?php //echo esc_url($btn1_url); ?><!--" class="azp-btn azp-btn--primary">--><?php //echo esc_html($btn1_lbl); ?><!--</a>-->
                                         <?php endif; ?>
                                         <?php if($btn2_lbl && $btn2_url): ?>
                                             <a href="<?php echo esc_url($btn2_url); ?>" class="azp-btn azp-btn--ghost"><?php echo esc_html($btn2_lbl); ?></a>

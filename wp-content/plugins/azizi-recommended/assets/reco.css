@@ -1,7 +1,14 @@
 /* ===== секция и шапка ===== */
-.azp-section{margin:48px 0}
+.azp-section{
+    margin: 48px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin: 30px auto;
+}
 .azp-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
-.azp-title{margin:0;font-weight:800;font-size:32px;line-height:1.2;color:#0b2139}
+.azp-title{margin:0;font-weight:800;font-size:1.5rem;line-height:1.2;color:#0b2139}
 .azp-nav{display:flex;gap:8px}
 .azp-prev,.azp-next{
     width:40px;height:40px;border-radius:50%;border:1px solid rgba(11,33,57,.12);
@@ -24,12 +31,14 @@
 .azp-card{
     position:relative;overflow:hidden;
     border-radius:28px;
-    background:#f7f9ff;
     min-height:360px;
     padding:28px 28px 24px;
     border:1px solid rgba(11,33,57,.08);
     box-shadow:0 8px 30px rgba(11,33,57,.08);
     color:#0b2139;
+    background: transparent !important;
+    box-shadow: none; /* если не нужен тень */
+    border: none;
 }
 
 /* фон-картинка на 100% */
@@ -144,7 +153,6 @@
 }
 
 .azp-card__actions{
-    margin-left:auto; /* сдвигаем кнопки вправо */
     display:flex;
     gap:10px;
 }

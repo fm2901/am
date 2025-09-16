@@ -66,8 +66,11 @@
             }
 
             // кнопки навигации
-            let prevBtn = qs('.azp-prev',root);
-            let nextBtn = qs('.azp-next',root);
+            // let prevBtn = qs('.azp-prev',root);
+            // let nextBtn = qs('.azp-next',root);
+            let prevBtn = document.querySelector('.azp-prev');
+            let nextBtn = document.querySelector('.azp-next');
+
             if(prevBtn) prevBtn.addEventListener('click',()=>go(current-1));
             if(nextBtn) nextBtn.addEventListener('click',()=>go(current+1));
 
