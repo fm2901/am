@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Azizi Slider (Vanilla)
  * Description: Слайдер баннеров с кастомным JS (vanilla) + мультиязычность. Фон задаётся через Featured Image.
- * Version:     1.3.0
+ * Version:     1.4.0
  * Author:      Azizi Team
  * Text Domain: azizi-slider
  */
@@ -63,10 +63,14 @@ class Azizi_Slider {
 
     /** Поля метабокса */
     public function render_meta($post) {
+        $pretitle = get_post_meta($post->ID, '_azizi_slide_pretitle', true);
         $subtitle = get_post_meta($post->ID, '_azizi_slide_subtitle', true);
         $link     = get_post_meta($post->ID, '_azizi_slide_link', true);
 
         wp_nonce_field('azizi_slide_meta', 'azizi_slide_meta_nonce');
+
+        echo '<p><label>'.__('Предзаголовок', 'azizi-slider').'</label><br>';
+        echo '<input type="text" name="azizi_slide_pretitle" value="'.esc_attr($pretitle).'" class="widefat"></p>';
 
         echo '<p><label>'.__('Подзаголовок', 'azizi-slider').'</label><br>';
         echo '<input type="text" name="azizi_slide_subtitle" value="'.esc_attr($subtitle).'" class="widefat"></p>';
@@ -82,6 +86,9 @@ class Azizi_Slider {
         if (!isset($_POST['azizi_slide_meta_nonce']) || !wp_verify_nonce($_POST['azizi_slide_meta_nonce'], 'azizi_slide_meta')) return;
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
 
+        if (isset($_POST['azizi_slide_pretitle'])) {
+            update_post_meta($post_id, '_azizi_slide_pretitle', sanitize_text_field($_POST['azizi_slide_pretitle']));
+        }
         if (isset($_POST['azizi_slide_subtitle'])) {
             update_post_meta($post_id, '_azizi_slide_subtitle', sanitize_text_field($_POST['azizi_slide_subtitle']));
         }
@@ -93,8 +100,8 @@ class Azizi_Slider {
     /** Подключаем CSS/JS */
     public function enqueue_assets() {
         $base = plugin_dir_url(__FILE__) . 'assets/';
-        wp_enqueue_style('azizi-slider', $base . 'css/slider.css', [], '1.3.0');
-        wp_enqueue_script('azizi-slider', $base . 'js/slider.js', [], '1.3.0', true);
+        wp_enqueue_style('azizi-slider', $base . 'css/slider.css', [], '1.4.0');
+        wp_enqueue_script('azizi-slider', $base . 'js/slider.js', [], '1.4.0', true);
     }
 
     /** Шорткод [azizi_slider] */
@@ -113,22 +120,26 @@ class Azizi_Slider {
             <div class="swiper" data-autoplay="3000" data-loop="true" data-effect="fade">
                 <div class="swiper-wrapper">
                     <?php while ($query->have_posts()): $query->the_post();
+                        $pretitle = get_post_meta(get_the_ID(), '_azizi_slide_pretitle', true);
                         $subtitle = get_post_meta(get_the_ID(), '_azizi_slide_subtitle', true);
                         $link     = get_post_meta(get_the_ID(), '_azizi_slide_link', true);
                         $bg       = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
                         <div class="swiper-slide">
                             <article class="sl-banner" style="background-image:url('<?php echo esc_url($bg); ?>');">
                                 <div class="sl-content">
+                                    <?php if ($pretitle): ?>
+                                        <p class="sl-pretitle"><?php echo esc_html($pretitle); ?></p>
+                                    <?php endif; ?>
                                     <h3 class="sl-title"><?php the_title(); ?></h3>
                                     <?php if ($subtitle): ?>
                                         <p class="sl-subtitle"><?php echo esc_html($subtitle); ?></p>
                                     <?php endif; ?>
-                                    <?php if ($link): ?>
-                                        <a class="sl-button" href="<?php echo esc_url($link); ?>">
-                                            <?php _e('Муфассал', 'azizi-slider'); ?>
-                                        </a>
-                                    <?php endif; ?>
                                 </div>
+                                <?php if ($link): ?>
+                                    <a class="sl-button banner-link" href="<?php echo esc_url($link); ?>">
+                                        <?php _e('Муфассал', 'azizi-slider'); ?>
+                                    </a>
+                                <?php endif; ?>
                             </article>
                         </div>
                     <?php endwhile; wp_reset_postdata(); ?>

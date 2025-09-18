@@ -68,3 +68,63 @@
 .swiper-slide.is-active {
     position: relative;
 }
+
+.sl-title {
+    font-size: 3rem;
+    line-height: 7rem;
+    text-transform: uppercase;
+}
+
+.sl-pretitle, .sl-subtitle {
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.sl-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 11vh 40px 0;
+    position: relative;
+    width: 80%;
+    max-width: 560px;
+    z-index: 2;
+    font-family: 'Montserrat';
+}
+
+.banner-link {
+    position: absolute;
+    bottom: 70px;
+    left: 100px;
+    background-color: var(--azizi-primary);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .sl-pretitle, .sl-subtitle {
+        font-size: 1.5rem;
+        line-height: 0;
+    }
+    .sl-title {
+        font-size: 2.4rem;
+        line-height: 4.8rem;
+    }
+    .sl-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 9vh 0;
+        position: relative;
+        width: 80%;
+    }
+    .sl-banner {
+        background-position: 39%;
+    }
+    .banner-link {
+        position: absolute;
+        bottom: 100px;
+        left: 20px;
+        background-color: var(--azizi-primary);
+        z-index: 999;
+    }
+}
