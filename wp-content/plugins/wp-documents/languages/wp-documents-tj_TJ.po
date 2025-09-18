@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wp-documents\n"
+"Language: tj_TJ\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: templates/documents-list.php
+msgid "Documents"
+msgstr "Ҳуҷҷатҳо"
+
+#: templates/documents-list.php
+msgid "Archived Documents"
+msgstr "Ҳуҷҷатҳои бойгонӣ"
+
+#: templates/documents-list.php
+msgid "Untitled"
+msgstr "Бе унвон"
+
+#: templates/documents-list.php
+msgid "file not attached"
+msgstr "файл замима нашудааст"

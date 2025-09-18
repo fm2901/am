@@ -1,0 +1,166 @@
+/* ===== Общая карточка ===== */
+.documents-wrapper {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin: 30px auto;
+    /*display: flex;*/
+    gap: 40px;
+}
+
+/* ===== Левая колонка ===== */
+.documents-categories {
+    flex: 1;
+    border-right: 2px solid #e0e0e0;
+    padding-right: 20px;
+}
+.documents-categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.documents-categories li {
+    margin: 10px 0;
+    position: relative;
+    cursor: pointer;
+}
+.documents-categories a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    display: block;
+    padding: 5px 0;
+}
+.documents-categories li.active-cat a {
+    color: #16576C;
+}
+.category-indicator {
+    position: absolute;
+    right: -22px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #16576C;
+    border-radius: 2px;
+}
+
+/* ===== Правая колонка ===== */
+.documents-list {
+    flex: 2;
+}
+.documents-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.documents-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.documents-list a {
+    text-decoration: none;
+    color: #16576C;
+    font-weight: 500;
+}
+.doc-icon {
+    color: #16576C;
+}
+.documents-cat-block {
+    display: none;
+}
+.documents-cat-block.active-block {
+    display: block;
+}
+
+/* ===== Аккордеон архива ===== */
+.archive-accordion {
+    margin: 100px;
+    background-color: #f7f8f9;
+    padding: 20px;
+    border-radius: 14px;
+}
+.archive-accordion-toggle {
+    width: 100%;
+    background: transparent;
+    color: #333;
+    border: none;
+    padding: 16px 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.archive-accordion-toggle .arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+.archive-accordion-toggle .arrow.rotated {
+    transform: rotate(-135deg);
+}
+.archive-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.archive-accordion-content.open {
+    /*padding: 16px 0;*/
+}
+
+/* ===== Сетка архивных документов ===== */
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.archive-grid li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.archive-grid a {
+    color: #16576C;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+.archive-grid a:hover {
+    text-decoration: underline;
+}
+.archive-accordion-content h4 {
+    margin: 16px 0 8px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+.active-documents {
+    margin: 30px auto;
+    display: flex;
+    gap: 40px;
+}
+
+/* ===== Мобильная версия ===== */
+@media (max-width: 768px) {
+    .documents-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .archive-grid {
+        grid-template-columns: 1fr;
+    }
+}
