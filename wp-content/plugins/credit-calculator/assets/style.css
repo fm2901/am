@@ -89,7 +89,7 @@
 }
 
 .cc-btn {
-    background: #00843d;
+    background: var(--azizi-primary);
     color: #fff;
     border: none;
     padding: 14px 22px;
@@ -252,7 +252,7 @@
 }
 
 .cc-btn:hover {
-    background: #006c31;
+    background: var(--azizi-primary-light);
 }
 
 #cc-product {

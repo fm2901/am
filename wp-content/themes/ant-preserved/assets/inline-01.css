@@ -28,7 +28,7 @@
 
 /* === Базовые стили === */
 body {
-    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-family: 'Montserrat', 'Roboto', sans-serif !important;
     color: #0d0e11;
     font-size: 15px;
     font-weight: 400;
@@ -179,6 +179,10 @@ body {
     }
 }
 
+.sl-button:hover {
+    background-color: var(--azizi-primary-light);
+}
+
 .sl-button {
     border-width: 1px;
     border-color: transparent;
@@ -192,7 +196,9 @@ body {
     font-weight: 500;
     line-height: 24px;
     padding: 11px 23px;
-    transition: background-color .2s ease 0s,border-color .2s ease 0s,color .2s ease 0s
+    transition: background-color .2s ease 0s,border-color .2s ease 0s,color .2s ease 0s;
+    background-color: var(--azizi-primary);
+    color: white;
 }
 
 .sl-button:disabled {
@@ -227,14 +233,14 @@ body {
 }
 
 .sl-white {
-    background-color: #fff;
+    background-color: var(--azizi-primary);
     border-color: #fff;
     color: #0d0e11
 }
 
 @media screen and (any-hover: hover) {
     .sl-white:hover {
-        background-color:#f8f8f8;
+        background-color: #1d5f75;
         border-color: #d0d0d0
     }
 }
@@ -1597,9 +1603,9 @@ body {
 }
 
 ._title_1fhxe_48 {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 36px
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--azizi-primary);
 }
 
 ._title_1fhxe_48 a {
@@ -1619,7 +1625,8 @@ body {
 
 .sl-link {
     background-color: #f7f9ff;
-    flex-shrink: 0
+    flex-shrink: 0;
+    color: var(--azizi-primary);
 }
 
 @media (max-width: 860px) {

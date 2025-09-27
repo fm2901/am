@@ -8,7 +8,7 @@
 <section class="_section_1fhxe_1">
     <div class="_header_1fhxe_21">
         <h2 class="_title_1fhxe_48"><?php _e('Новости компании', 'azizi-news'); ?></h2>
-        <a class="sl-button sl-white sl-link" href="<?php echo get_post_type_archive_link('azp_news'); ?>">
+        <a class="sl-button" href="<?php echo get_post_type_archive_link('azp_news'); ?>">
             <span><?php _e('Все новости', 'azizi-news'); ?></span>
         </a>
     </div>

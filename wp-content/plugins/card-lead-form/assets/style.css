@@ -1,10 +1,4 @@
-:root {
-    --azizi-primary: #16576C;
-    --azizi-accent: #ffcc00;
-    --azizi-bg: #f5f7fa;
-    --azizi-text: #333;
-    --azizi-success: #2e7d32;
-}
+
 
 /* ========== Обертка модалки ========== */
 .card-lead-modal {
@@ -126,6 +120,10 @@
     margin-top: 15px;
     font-size: 14px;
     text-align: center;
+}
+
+.card-lead-open:hover {
+    background-color: var(--azizi-primary-light);;
 }
 
 .card-lead-open {

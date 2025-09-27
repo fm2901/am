@@ -1,3 +1,12 @@
+:root {
+    --azizi-primary: #16576C;
+    --azizi-primary-light: #1f7a99;
+    --azizi-accent: #ffcc00;
+    --azizi-bg: #f5f7fa;
+    --azizi-text: #333;
+    --azizi-success: #2e7d32;
+}
+
 .cw-widget { margin-top: 24px; }
 .cw-header { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
 .cw-controls { display:flex; align-items:center; gap:10px; position:relative; }
