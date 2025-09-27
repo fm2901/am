@@ -212,7 +212,7 @@ body {
 
 @media (max-width: 480px) {
     .sl-button {
-        font-size:13px;
+        font-size:12px;
         font-weight: 500;
         line-height: 20px
     }
@@ -1595,7 +1595,7 @@ body {
 }
 
 ._header_1fhxe_21:not(:last-child) {
-    margin: 0 0 32px
+    margin: 0 0 16px
 }
 
 ._breadcrumbs_1fhxe_30 {

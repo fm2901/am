@@ -8,7 +8,7 @@
     margin: 30px auto;
 }
 .azp-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
-.azp-title{margin:0;font-weight:800;font-size:1.5rem;line-height:1.2;color:#0b2139}
+.azp-title{margin:0;font-weight:800;font-size:24px;line-height:1.2;color:var(--azizi-primary)}
 .azp-nav{display:flex;gap:8px}
 .azp-prev,.azp-next{
     width:40px;height:40px;border-radius:50%;border:1px solid rgba(11,33,57,.12);
