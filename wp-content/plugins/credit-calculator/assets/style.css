@@ -85,7 +85,7 @@
 .cc-monthly {
     font-size: 24px;
     font-weight: 700;
-    color: #00843d;
+    color: var(--azizi-primary) !important;
 }
 
 .cc-btn {
@@ -117,7 +117,7 @@
 
 /* Общий контейнер */
 .cc-calculator-box {
-    background: #f0f6fa;
+    background: var(--azizi-primary);
     border-radius: 12px;
     padding: 30px;
     margin: 40px 0;
@@ -150,13 +150,14 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #1c3553;
+    color: var(--azizi-primary);
 }
 
 .cc-subtitle {
     font-size: 14px;
-    color: #666;
+    color: var(--azizi-primary);
     margin: 0;
+    font-weight: 700;
 }
 
 .cc-approve {
@@ -195,7 +196,7 @@
     font-weight: 500;
     display: block;
     margin-bottom: 6px;
-    color: #1c3553;
+    color: var(--azizi-primary);
 }
 
 .cc-input-wrap {
@@ -233,13 +234,13 @@
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-    color: #666;
+    color: var(--azizi-primary);
     margin-top: 4px;
 }
 
 /* Кнопка */
 .cc-btn {
-    background: #00843d;
+    background: var(--azizi-primary);
     color: #fff;
     border: none;
     padding: 14px 22px;
@@ -381,3 +382,12 @@
         border: 1px solid #dae3ec;
     }
 }
+
+.wheat {
+    color: wheat !important;
+}
+
+.white {
+    color: white !important;
+}
+

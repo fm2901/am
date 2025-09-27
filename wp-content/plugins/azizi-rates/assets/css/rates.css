@@ -21,7 +21,7 @@
 .cw-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1c2c4c;
+    color: var(--azizi-primary);
 }
 
 /* Кнопка выбора режима */
@@ -37,6 +37,7 @@
     font-size: 0.9rem;
     font-weight: 600;
     transition: all 0.2s ease;
+    color: var(--azizi-primary);
 }
 
 .cw-mode-btn:hover {
@@ -62,7 +63,7 @@
     display: block;
     padding: 10px 16px;
     font-size: 0.9rem;
-    color: #374151;
+    color: var(--azizi-primary);
     background: transparent;
     border: none;
     text-align: left;
@@ -111,7 +112,7 @@
 .cw-table th {
     text-align: left;
     font-size: 0.85rem;
-    color: #6b7280;
+    color: var(--azizi-primary);
     padding-bottom: 8px;
     border-bottom: 1px solid #e5e7eb;
 }
@@ -119,7 +120,7 @@
 .cw-table td {
     padding: 10px 0;
     font-size: 1rem;
-    color: #1f2937;
+    color: var(--azizi-primary);
     border-bottom: 1px solid #f0f2f5;
 }
 
@@ -130,7 +131,7 @@
 .cw-empty {
     text-align: center;
     padding: 20px;
-    color: #9ca3af;
+    color: var(--azizi-primary);
 }
 
 /* Конвертер */
@@ -138,7 +139,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 12px;
-    color: #1c2c4c;
+    color: var(--azizi-primary);
 }
 
 .cw-conv-row {
@@ -158,13 +159,13 @@
 .cw-conv-result {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #16a34a;
+    color: var(--azizi-primary);
     margin-bottom: 8px;
 }
 
 .cw-note {
     font-size: 0.8rem;
-    color: #6b7280;
+    color: var(--azizi-primary);
 }
 
 @media screen and (max-width: 640px) {

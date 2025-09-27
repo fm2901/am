@@ -46,11 +46,11 @@ add_shortcode('credit_calculator', function(){
 
             <!-- Левая часть -->
             <div class="cc-left">
-                <h2 class="cc-title"><?php _e("Кредитный калькулятор", "credit-calculator"); ?></h2>
+                <h2 class="cc-title white"><?php _e("Кредитный калькулятор", "credit-calculator"); ?></h2>
 
                 <!-- Цель кредита -->
                 <div class="cc-form-group">
-                    <label><?php _e("Цель кредита", "credit-calculator"); ?></label>
+                    <label class="white"><?php _e("Цель кредита", "credit-calculator"); ?></label>
                     <select id="cc-product" class="cc-input">
                         <?php
                         $products = get_posts([
@@ -82,13 +82,13 @@ add_shortcode('credit_calculator', function(){
 
                     <!-- Сумма кредита -->
                     <div class="cc-form-group">
-                        <label><?php _e("Сумма кредита", "credit-calculator"); ?></label>
+                        <label class="white"><?php _e("Сумма кредита", "credit-calculator"); ?></label>
                         <div class="cc-input-wrap">
                             <input type="number" id="cc-amount" class="cc-input">
                             <span class="cc-suffix">TJS</span>
                         </div>
                         <input type="range" id="cc-amount-range" class="cc-range" step="500">
-                        <div class="cc-hints">
+                        <div class="cc-hints white">
                             <span id="cc-amount-min"><?php _e("от", "credit-calculator"); ?> 0</span>
                             <span id="cc-amount-max"><?php _e("до", "credit-calculator"); ?> 0</span>
                         </div>
@@ -96,13 +96,13 @@ add_shortcode('credit_calculator', function(){
 
                     <!-- Срок кредита -->
                     <div class="cc-form-group">
-                        <label><?php _e("Срок кредита", "credit-calculator"); ?></label>
+                        <label class="white"><?php _e("Срок кредита", "credit-calculator"); ?></label>
                         <div class="cc-input-wrap">
                             <input type="text" id="cc-term-value" class="cc-input" readonly>
                             <span class="cc-suffix"><?php _e("мес.", "credit-calculator"); ?></span>
                         </div>
                         <input type="range" id="cc-term" class="cc-range">
-                        <div class="cc-hints">
+                        <div class="cc-hints white">
                             <span id="cc-term-min">от 0 мес.</span>
                             <span id="cc-term-max">до 0 мес.</span>
                         </div>

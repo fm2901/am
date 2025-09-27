@@ -5,3 +5,7 @@ Version: 1.0.0
 Requires PHP: 7.4
 Text Domain: azizi-main
 */
+
+* {
+    font-family: Montserrat, Roboto, "sans-serif" !important;
+}
