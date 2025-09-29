@@ -110,7 +110,7 @@ class AziziRecommended {
                         $img = get_the_post_thumbnail_url($id,'large');
                         $price = get_post_meta($id,'azp_price',true);
                         $price_suf = get_post_meta($id,'azp_price_suffix',true);
-                        $features = array_filter(array_map('trim', explode("\n", get_post_meta($id,'azp_features',true))));
+                        $features = array_filter(array_map('trim', explode(";", get_post_meta($id,'azp_features',true))));
                         $btn1_lbl = get_post_meta($id,'azp_btn1_label',true);
                         $btn1_url = get_post_meta($id,'azp_btn1_url',true);
                         $btn2_lbl = get_post_meta($id,'azp_btn2_label',true);
