@@ -34,7 +34,8 @@
     min-height:360px;
     padding:28px 28px 24px;
     border:1px solid rgba(11,33,57,.08);
-    box-shadow:0 8px 30px rgba(11,33,57,.08);
+    /*box-shadow:0 8px 30px rgba(11,33,57,.08);*/
+    box-shadow: 0 1px 6px rgb(150 206 235) !important;
     color:#0b2139;
     background: transparent !important;
     box-shadow: none; /* если не нужен тень */
@@ -61,23 +62,50 @@
 
 /* контент всегда над градиентом */
 .azp-card__header,.azp-card__features,.azp-card__footer{position:relative;z-index:3}
-
+.azp-card__header {
+    flex: 3;
+}
+.azp-card__features {
+    flex: 5;
+}
+.azp-card__footer {
+    flex: 0;
+}
 /* заголовки */
-.azp-card__title{margin:0 0 6px;font-weight:800;font-size:26px;line-height:1.25}
+.azp-card__title{margin:0 0 6px;font-weight:800;font-size:26px;line-height:1.25;color: var(--azizi-primary)}
 .azp-card__subtitle{opacity:.9;font-size:14px}
 
 /* список фич */
-.azp-card__features{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.azp-card__features{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: var(--azizi-primary);
+}
 .azp-card__features li{
-    position:relative;padding-left:28px;font-size:15px;line-height:1.35
+    position:relative;padding-left:28px;font-size:16px;line-height:1.35;font-weight: 500;
 }
 .azp-card__features li::before{
-    content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:6px;
-    background:rgba(255,255,255,.9);box-shadow:0 2px 6px rgba(0,0,0,.06);
-    /* маленькая «иконка-галочка» */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 21px;
+    height: 21px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
 }
 .azp-card__features li::after{
-    content:"";position:absolute;left:6px;top:9px;width:6px;height:3px;border-left:2px solid #2a5bd7;border-bottom:2px solid #2a5bd7;transform:rotate(-45deg)
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid #2a5bd7;
+    border-bottom: 2px solid #2a5bd7;
+    transform: rotate(-45deg);
 }
 
 /* футер: цена + кнопки */
@@ -89,8 +117,25 @@
 /* кнопки */
 .azp-btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    height:44px;padding:0 18px;border-radius:14px;border:1px solid transparent;text-decoration:none;
-    font-weight:700;font-size:14px;transition:.2s ease;white-space:nowrap
+    border-width: 1px;
+    border-color: var(--azizi-primary) !important;
+    border-style: solid;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 9px 15px;
+    transition: background-color .2s
+    ease 0s, border-color .2s
+    ease 0s, color .2s
+    ease 0s;
+    background-color: white;
+    color: var(--azizi-primary);
+    cursor: pointer;
 }
 .azp-btn--primary{background:#16576C;color:#fff;box-shadow:0 6px 18px rgba(30,67,208,.25)}
 .azp-btn--primary:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(30,67,208,.28)}
@@ -104,12 +149,14 @@
     .azp-card__price-value{font-size:36px}
 }
 @media (max-width: 640px){
+    .azp-section{margin:0;padding:0}
     .azp-head{margin-bottom:12px}
     .azp-card{min-height:300px;padding:18px;border-radius:20px}
     .azp-card__title{font-size:22px}
     .azp-card__features{gap:10px}
     .azp-card__footer{flex-direction:column;align-items:flex-start}
-    .azp-btn{width:100%}
+    .azp-btn{}
+    .azp-card__image{width: 129%; left: -15%; object-position: center center;}
 }
 
 .azp-wrapper {
