@@ -61,6 +61,7 @@
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed; /* фиксированная раскладка, чтобы числа не раздвигали макет */
+    font-family: Montserrat, Roboto, "sans-serif";
 }
 #cw-widget .cw-table th,
 #cw-widget .cw-table td {
