@@ -1762,7 +1762,7 @@ body {
 }
 
 .main {
-    padding: 40px 0 40px
+    padding: 20px 0 40px
 }
 
 main>section:not(:last-child) {

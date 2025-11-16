@@ -1,0 +1,263 @@
+/* ============================================================
+   SLIDER WRAPPER (адаптивная высота)
+============================================================ */
+.azizi-slider {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 430px;
+    max-height: 430px;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+/* ============================================================
+   SWIPER STRUCTURE
+============================================================ */
+.swiper,
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Все слайды поверх друг друга */
+.swiper-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.03);
+    z-index: 1;
+    transition:
+            opacity .7s ease,
+            transform .7s ease;
+}
+
+/* Активный слайд */
+.swiper-slide.is-active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3;
+}
+
+/* Соседние — для fade-перехода */
+.swiper-slide.prev,
+.swiper-slide.next {
+    opacity: 0;
+    z-index: 2;
+}
+
+/* ============================================================
+   BACKGROUND + VIDEO
+============================================================ */
+.slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 1.5s ease;
+    z-index: 1;
+}
+
+.video-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.video-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================================
+   CONTENT (текст)
+============================================================ */
+.content {
+    position: relative;
+    z-index: 5;
+    padding: 50px;
+    color: #fff;
+    max-width: 700px;
+}
+
+.content .pre {
+    font-size: 18px;
+    opacity: .9;
+}
+.content .title {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.content .sub {
+    font-size: 20px;
+    opacity: .85;
+}
+
+.btn.cta {
+    display: inline-block;
+    padding: 12px 26px;
+    margin-top: 20px;
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background .25s;
+}
+.btn.cta:hover {
+    background: #f0f0f0;
+}
+
+/* ============================================================
+   MTS-STYLE TOP PROGRESS BARS
+============================================================ */
+.mts-progress {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    right: 30px;
+    display: grid;
+    grid-template-columns: repeat(var(--count, 3), 1fr);
+    gap: 10px;
+    z-index: 30;
+}
+
+.mts-pagination-button {
+    height: 4px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mts-pagination-progress {
+    height: 100%;
+    width: 0%;
+    background: #e60000;
+    transition: width linear;
+}
+
+/* ============================================================
+   MTS-STYLE BOTTOM RIGHT ARROWS
+============================================================ */
+/* Вставляем внешний блок стрелок внутрь bottom-panel по позиции */
+.mts-arrows {
+    position: absolute !important;
+    bottom: 30px !important;
+    right: 40px !important;
+
+    display: flex;
+    gap: 12px;
+    z-index: 9999;
+}
+
+
+.mts-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+            0 0 0 1px rgba(0,0,0,0.1),
+            0 2px 4px rgba(0,0,0,0.12);
+
+    transition: background .25s;
+}
+
+.mts-arrow:hover {
+    background: #f5f5f5;
+}
+
+.mts-arrow::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Icons */
+.mts-prev::before {
+    background-image: url("https://static.mts.ru/mts_rf/images/mm-web/icons/chevron-left.svg");
+}
+.mts-next::before {
+    background-image: url("https://static.mts.ru/mts_rf/images/mm-web/icons/chevron-right.svg");
+}
+/* ============================== */
+/*  FIX: стрелки и кнопка снизу   */
+/* ============================== */
+
+.bottom-panel {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 50;
+    pointer-events: none;
+}
+.bottom-panel * {
+    pointer-events: auto;
+}
+
+
+.bottom-panel .left,
+.bottom-panel .right,
+.bottom-panel .btn,
+.bottom-panel button {
+    pointer-events: auto; /* ← но кнопки ловят клики */
+}
+
+.bottom-panel .right {
+    display: flex;
+    gap: 12px;
+}
+
+/* СТРЕЛКИ — поверх всего */
+.bottom-panel .mts-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+            0 0 0 1px rgba(0,0,0,0.1),
+            0 2px 4px rgba(0,0,0,0.12);
+
+    z-index: 10000 !important;
+}
+
+.bottom-panel .mts-arrow:hover {
+    background: #f5f5f5;
+}
+
+/* Левая кнопка */
+.bottom-panel .btn.cta {
+    background: #fff;
+    color: #333;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+}
