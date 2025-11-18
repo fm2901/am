@@ -61,9 +61,9 @@ $count    = $q->found_posts;
 
                     <!-- TEXT CONTENT -->
                     <div class="content">
-                        <?php if($pre): ?><div class="pre"><?=esc_html($pre)?></div><?php endif; ?>
-                        <h2 class="title"><?=esc_html(get_the_title())?></h2>
-                        <?php if($sub): ?><div class="sub"><?=esc_html($sub)?></div><?php endif; ?>
+                        <?php if($pre): ?><div class="pre"><?=esc_html(pll__($pre))?></div><?php endif; ?>
+                        <h2 class="title"><?=esc_html(pll__(get_the_title()))?></h2>
+                        <?php if($sub): ?><div class="sub"><?=esc_html(pll__($sub))?></div><?php endif; ?>
                     </div>
 
                     <!-- BOTTOM PANEL (только кнопка) -->
