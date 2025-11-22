@@ -3,7 +3,7 @@
     let currentMode = 'card';
 
     //const API_URL = 'https://azizimoliya.tj/rates-api/';
-    const API_URL = 'https://newsite.azizimoliya.tj/rates-api/'; 
+    const API_URL = 'https://azizimoliya.tj/rates-api/';
     const ORDER = ['rub', 'eur', 'usd'];
     const META = {
         rub: { code: 'RUB', flag: '🇷🇺' },
