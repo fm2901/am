@@ -1,0 +1,273 @@
+/* Deposit Products Grid */
+.deposit-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Deposit Card */
+.deposit-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deposit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.deposit-card-logo {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.deposit-card-logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+.deposit-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.deposit-card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.deposit-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.deposit-info-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.deposit-info-value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #00008F;
+}
+
+.deposit-card-actions {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.deposit-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.deposit-btn-primary {
+    background-color: #00008F;
+    color: #fff;
+    border-color: #00008F;
+}
+
+.deposit-btn-primary:hover {
+    background-color: #000070;
+    border-color: #000070;
+    color: #fff;
+}
+
+.deposit-btn-secondary {
+    background-color: transparent;
+    color: #00008F;
+    border-color: #00008F;
+}
+
+.deposit-btn-secondary:hover {
+    background-color: #00008F;
+    color: #fff;
+}
+
+/* Single Deposit Page */
+.deposit-single-page {
+    margin: 0;
+    padding: 0;
+}
+
+.deposit-banner {
+    position: relative;
+    background: linear-gradient(135deg, #00008F 0%, #2955D9 100%);
+    color: #fff;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.deposit-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+}
+
+.deposit-banner-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.deposit-banner-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.deposit-banner-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.deposit-banner-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.deposit-banner-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.deposit-banner-label {
+    display: block;
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.deposit-banner-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.deposit-banner-btn {
+    display: inline-block;
+    background: #fff;
+    color: #00008F;
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: block;
+    max-width: 300px;
+    text-align: center;
+}
+
+.deposit-banner-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.deposit-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.deposit-content-inner {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.deposit-content-inner h2 {
+    color: #00008F;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.deposit-content-inner p {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.deposit-content-inner ul,
+.deposit-content-inner ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.deposit-content-inner li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .deposit-products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .deposit-card-info {
+        grid-template-columns: 1fr;
+    }
+
+    .deposit-banner-title {
+        font-size: 28px;
+    }
+
+    .deposit-banner-info {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .deposit-banner-value {
+        font-size: 20px;
+    }
+
+    .deposit-content-inner {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .deposit-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

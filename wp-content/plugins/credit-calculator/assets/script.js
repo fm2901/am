@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     const productSelect = document.getElementById("cc-product");
     const amountInput = document.getElementById("cc-amount");
     const amountRange = document.getElementById("cc-amount-range");
@@ -17,7 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeModalBtn = document.querySelector(".cc-modal-close");
     const leadForm = document.getElementById("lead-form");
 
+    /* ============================
+       CALC LOGIC
+    ============================ */
+
     function recalc() {
+        if (!productSelect) return;
+
         const selected = productSelect.options[productSelect.selectedIndex];
         const rate = parseFloat(selected.dataset.rate) / 100 / 12;
         const amount = parseFloat(amountInput.value);
@@ -26,12 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const monthly = (amount * rate) / (1 - Math.pow(1 + rate, -term));
         monthlyEl.textContent = isNaN(monthly) ? 0 : monthly.toFixed(2);
 
-        // обновляем поле срока правильно
         if (termValue) termValue.value = term;
     }
 
-
     function updateLimits() {
+        if (!productSelect) return;
+
         const selected = productSelect.options[productSelect.selectedIndex];
         const min = parseInt(selected.dataset.min);
         const max = parseInt(selected.dataset.max);
@@ -52,75 +59,113 @@ document.addEventListener("DOMContentLoaded", function () {
         termRange.min = termMin;
         termRange.max = termMax;
         termRange.value = termMin;
-        termValue.value = termMin; // ← исправлено на .value
+        termValue.value = termMin;
         termMinLabel.textContent = cc_ajax.i18n.from + " " + termMin + " " + cc_ajax.i18n.months;
         termMaxLabel.textContent = cc_ajax.i18n.to + " " + termMax + " " + cc_ajax.i18n.months;
 
         recalc();
     }
 
+    if (productSelect) {
+        productSelect.addEventListener("change", updateLimits);
+        updateLimits();
+    }
 
+    if (amountInput && amountRange) {
+        amountInput.addEventListener("input", () => {
+            amountRange.value = amountInput.value;
+            recalc();
+        });
 
-    // события
-    productSelect.addEventListener("change", updateLimits);
-
-    amountInput.addEventListener("input", function () {
-        amountRange.value = this.value;
-        recalc();
-    });
-
-    amountRange.addEventListener("input", function () {
-        amountInput.value = this.value;
-        recalc();
-    });
-
-    termRange.addEventListener("input", recalc);
-
-    // стартовые значения
-    updateLimits();
-
-    // модалка
-    if (openModalBtn && modal) {
-        openModalBtn.addEventListener("click", () => {
-            // продукт
-            const selectedProduct = productSelect.value;
-            const leadProduct = document.getElementById("cc-lead-product");
-            if (leadProduct) {
-                leadProduct.value = selectedProduct;
-            }
-
-            // сумма
-            const currentAmount = amountInput.value;
-            const leadAmount = document.getElementById("cc-lead-amount");
-            if (leadAmount) {
-                leadAmount.value = currentAmount;
-            }
-
-            // срок
-            const currentTerm = termRange.value;
-            const leadTerm = document.getElementById("cc-lead-term");
-            if (leadTerm) {
-                leadTerm.value = currentTerm;
-            }
-
-            // показать модалку
-            modal.style.display = "flex";
+        amountRange.addEventListener("input", () => {
+            amountInput.value = amountRange.value;
+            recalc();
         });
     }
 
+    if (termRange) {
+        termRange.addEventListener("input", recalc);
+    }
+
+    /* ============================
+       MODAL OPEN (UNIFIED)
+    ============================ */
+
+    function openCalcModal(productName = null) {
+        if (!modal) return;
+
+        // если клик из карточки — синхронизируем продукт
+        if (productName && productSelect) {
+            for (let opt of productSelect.options) {
+                if (opt.value === productName) {
+                    productSelect.value = productName;
+                    productSelect.dispatchEvent(new Event("change"));
+                    break;
+                }
+            }
+        }
+
+        // скрытые поля лида
+        const leadProduct = document.getElementById("cc-lead-product");
+        if (leadProduct) {
+            leadProduct.value = productName || productSelect?.value || "";
+        }
+
+        const leadAmount = document.getElementById("cc-lead-amount");
+        if (leadAmount && amountInput) {
+            leadAmount.value = amountInput.value;
+        }
+
+        const leadTerm = document.getElementById("cc-lead-term");
+        if (leadTerm && termRange) {
+            leadTerm.value = termRange.value;
+        }
+
+        modal.style.display = "flex";
+    }
+
+    /* ============================
+       OPEN FROM CALCULATOR
+    ============================ */
+
+    if (openModalBtn) {
+        openModalBtn.addEventListener("click", function () {
+            openCalcModal(productSelect?.value || null);
+        });
+    }
+
+    /* ============================
+       OPEN FROM PRODUCT CARDS
+    ============================ */
+
+    document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".open-credit-modal");
+        if (!btn) return;
+
+        e.preventDefault();
+        openCalcModal(btn.dataset.product || null);
+    });
+
+    /* ============================
+       CLOSE MODAL
+    ============================ */
 
     if (closeModalBtn) {
         closeModalBtn.addEventListener("click", () => {
             modal.style.display = "none";
         });
     }
+
     window.addEventListener("click", function (e) {
         if (e.target === modal) {
             modal.style.display = "none";
         }
     });
 
-    // отправка формы
+    /* ============================
+       SEND FORM
+    ============================ */
+
     if (leadForm) {
         leadForm.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -132,12 +177,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 method: "POST",
                 body: formData,
             })
-                .then((res) => res.json())
-                .then((r) => {
+                .then(res => res.json())
+                .then(r => {
                     alert(r.data.message);
                     modal.style.display = "none";
                 })
-                .catch((err) => console.error(err));
+                .catch(console.error);
         });
     }
+
 });

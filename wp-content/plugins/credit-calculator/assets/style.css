@@ -391,3 +391,241 @@
     color: white !important;
 }
 
+/* === Horizontal credit card (exact layout) === */
+
+.credit-card-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    border-radius: 32px;
+    border: 1px solid #ccc;
+    padding: 40px 48px;
+    margin-bottom: 40px;
+    background: #fffdfd;
+    color: rgb(34, 34, 34);
+}
+
+/* Левая иллюстрация */
+.credit-card-horizontal__image {
+    flex: 0 0 420px;
+}
+
+.credit-card-horizontal__image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Правая часть */
+.credit-card-horizontal__content {
+    flex: 1;
+}
+
+/* Заголовок */
+.credit-card-horizontal__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1c3553;
+    margin-bottom: 32px;
+}
+
+/* Параметры */
+.credit-card-horizontal__params {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #e6eef5;
+    padding-bottom: 24px;
+}
+
+.credit-card-horizontal__params .param span {
+    display: block;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.credit-card-horizontal__params .param strong {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Кнопки */
+.credit-card-horizontal__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.credit-card-horizontal__actions .btn-primary {
+    background: var(--azizi-primary);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.credit-card-horizontal__more {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--azizi-primary);
+    text-decoration: none;
+}
+
+/* Адаптив */
+@media (max-width: 1024px) {
+    .credit-card-horizontal {
+        flex-direction: column;
+        padding: 32px;
+        text-align: center;
+    }
+
+    .credit-card-horizontal__params {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .credit-card-horizontal__actions {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .credit-card-horizontal__params {
+        grid-template-columns: 1fr;
+    }
+
+    .credit-card-horizontal__title {
+        font-size: 22px;
+    }
+}
+
+/* ================================ */
+/* CREDIT PRODUCTS HARD ISOLATION   */
+/* ================================ */
+
+.cc-credit-products,
+.cc-credit-products * {
+    box-sizing: border-box !important;
+}
+
+.cc-credit-products {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cc-credit-products .credit-card-horizontal {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    background: #fff;
+    border-radius: 32px;
+    padding: 40px 48px;
+    margin: 40px 0 !important;
+}
+
+.cc-credit-products .credit-card-horizontal__image {
+    flex: 0 0 420px !important;
+    max-width: 420px !important;
+}
+
+.cc-credit-products .credit-card-horizontal__image img {
+    width: 100% !important;
+    max-width: none !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+.cc-credit-products .credit-card-horizontal__params {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 32px !important;
+}
+
+.entry-content .cc-credit-products {
+    max-width: none !important;
+}
+
+/* ============================= */
+/* MOBILE CREDIT CARD (≤768px) */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .cc-credit-products .credit-card-horizontal {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 24px !important;
+        gap: 20px !important;
+        border-radius: 24px;
+    }
+
+    /* IMAGE */
+    .cc-credit-products .credit-card-horizontal__image {
+        flex: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cc-credit-products .credit-card-horizontal__image img {
+        width: 100% !important;
+        max-width: 240px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* TITLE */
+    .cc-credit-products .credit-card-horizontal__title {
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* PARAMS */
+    .cc-credit-products .credit-card-horizontal__params {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+    }
+
+    .cc-credit-products .credit-card-horizontal__params .param span {
+        font-size: 13px;
+    }
+
+    .cc-credit-products .credit-card-horizontal__params .param strong {
+        font-size: 16px;
+    }
+
+    /* ACTIONS */
+    .cc-credit-products .credit-card-horizontal__actions {
+        flex-direction: column !important;
+        gap: 12px;
+    }
+
+    .cc-credit-products .credit-card-horizontal__actions .btn-primary {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .cc-credit-products .credit-card-horizontal__more {
+        text-align: center;
+        display: block;
+        font-size: 14px;
+    }
+}

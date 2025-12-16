@@ -112,3 +112,70 @@ msgstr "до"
 
 msgid "мес."
 msgstr "мес."
+
+# ===============================
+# Credit products list (cards)
+# ===============================
+
+msgid "Кредитҳо дастрас нестанд"
+msgstr "Кредиты недоступны"
+
+msgid "Фоиз бо сомонӣ"
+msgstr "Процент в сомони"
+
+msgid "Фоиз бо доллар"
+msgstr "Процент в долларах"
+
+msgid "Мӯҳлати қарз"
+msgstr "Срок кредита"
+
+msgid "%s моҳ"
+msgstr "%s мес."
+
+msgid "Маблағи қарз"
+msgstr "Сумма кредита"
+
+msgid "аз %s с."
+msgstr "от %s c."
+
+msgid "то %s%%"
+msgstr "до %s%%"
+
+msgid "Дархости қарз"
+msgstr "Оформить кредит"
+
+msgid "Бештар"
+msgstr "Подробнее"
+
+msgid "Ҳамаи қарзҳо"
+msgstr "Все кредиты"
+
+msgid "Фоиз"
+msgstr "Процентная ставка"
+
+msgid "Муҳлат"
+msgstr "Срок"
+
+msgid "Маблағ"
+msgstr "Сумма"
+
+msgid "моҳ"
+msgstr "мес."
+
+msgid "с."
+msgstr "сом."
+
+msgid "Дархости қарз"
+msgstr "Подать заявку"
+
+msgid "Apply for loan"
+msgstr "Подать заявку"
+
+msgid "Бозгашт ба рӯйхат"
+msgstr "Назад к списку"
+
+msgid "Ҳамаи қарзҳо"
+msgstr "Все кредиты"
+
+msgid "Маълумоти бештар"
+msgstr "Подробнее"

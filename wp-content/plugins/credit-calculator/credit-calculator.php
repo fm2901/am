@@ -9,6 +9,7 @@ Domain Path: /languages
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
+require_once plugin_dir_path(__FILE__) . 'shortcodes/products-cards.php';
 
 add_action('wp_enqueue_scripts', function(){
     wp_enqueue_style('credit-calculator-style', plugins_url('/assets/style.css', __FILE__));

@@ -118,3 +118,69 @@ msgstr "то"
 msgid "мес."
 msgstr "моҳ"
 
+# ===============================
+# Credit products list (cards)
+# ===============================
+
+msgid "Кредитҳо дастрас нестанд"
+msgstr "Қарзҳо дастрас нестанд"
+
+msgid "Фоиз бо сомонӣ"
+msgstr "Фоиз бо сомонӣ"
+
+msgid "Фоиз бо доллар"
+msgstr "Фоиз бо доллар"
+
+msgid "Мӯҳлати қарз"
+msgstr "Мӯҳлати қарз"
+
+msgid "%s моҳ"
+msgstr "%s моҳ"
+
+msgid "Маблағи қарз"
+msgstr "Маблағи қарз"
+
+msgid "аз %s с."
+msgstr "аз %s с."
+
+msgid "то %s%%"
+msgstr "то %s%%"
+
+msgid "Дархости қарз"
+msgstr "Дархости қарз"
+
+msgid "Бештар"
+msgstr "Бештар"
+
+msgid "Ҳамаи қарзҳо"
+msgstr "Ҳамаи қарзҳо"
+
+msgid "Фоиз"
+msgstr "Фоиз"
+
+msgid "Муҳлат"
+msgstr "Муҳлат"
+
+msgid "Маблағ"
+msgstr "Маблағ"
+
+msgid "моҳ"
+msgstr "моҳ"
+
+msgid "с."
+msgstr "сомонӣ"
+
+msgid "Дархости қарз"
+msgstr "Дархости қарз"
+
+msgid "Apply for loan"
+msgstr "Дархости қарз"
+
+msgid "Бозгашт ба рӯйхат"
+msgstr "Бозгашт ба рӯйхат"
+
+msgid "Ҳамаи қарзҳо"
+msgstr "Ҳамаи қарзҳо"
+
+msgid "Маълумоти бештар"
+msgstr "Маълумоти бештар"
