@@ -10,12 +10,28 @@ $rate_dollar = get_post_meta(get_the_ID(), '_deposit_rate_dollar', true);
 $period = get_post_meta(get_the_ID(), '_deposit_period', true);
 $min_amount = get_post_meta(get_the_ID(), '_deposit_min_amount', true);
 $currency = get_post_meta(get_the_ID(), '_deposit_currency', true) ?: 'somoni';
-$form_url = get_post_meta(get_the_ID(), '_deposit_form_url', true) ?: '#deposit-form';
 
 $currency_label = $currency === 'somoni' ? __('с.', 'deposit-products') : __('$', 'deposit-products');
+
+// Получаем URL страницы депозитов для хлебных крошек
+$deposits_page_url = function_exists('pll_get_post') ? get_permalink(pll_get_post(get_option('page_for_deposits'))) : '#';
+if (!$deposits_page_url || $deposits_page_url === '#') {
+    // Пробуем найти страницу с шаблоном Депозиты
+    $pages = get_pages(array('meta_key' => '_wp_page_template', 'meta_value' => 'deposit.php'));
+    if (!empty($pages)) {
+        $deposits_page_url = get_permalink($pages[0]->ID);
+    }
+}
 ?>
 
 <div class="deposit-single-page">
+    <!-- Хлебные крошки -->
+    <nav class="deposit-breadcrumbs" style="max-width: 1200px; margin: 20px auto; padding: 0 20px;">
+        <a href="<?php echo esc_url($deposits_page_url); ?>" style="color: #1c3553; text-decoration: none;">
+            ← <?php _e('Ҳамаи амонатҳо', 'deposit-products'); ?>
+        </a>
+    </nav>
+
     <!-- Баннер -->
     <div class="deposit-banner">
         <?php if (has_post_thumbnail()) : ?>
@@ -57,9 +73,9 @@ $currency_label = $currency === 'somoni' ? __('с.', 'deposit-products') : __('$
                 <?php endif; ?>
             </div>
 
-            <a href="<?php echo esc_url($form_url); ?>" class="deposit-banner-btn">
+            <button class="deposit-banner-btn open-deposit-modal">
                 <?php _e('Амонат гузоштан', 'deposit-products'); ?>
-            </a>
+            </button>
         </div>
     </div>
 
@@ -68,6 +84,11 @@ $currency_label = $currency === 'somoni' ? __('с.', 'deposit-products') : __('$
         <div class="deposit-content-inner">
             <?php the_content(); ?>
         </div>
+    </div>
+
+    <!-- Калькулятор депозита -->
+    <div class="deposit-calculator-section" style="margin-top: 40px;">
+        <?php echo do_shortcode('[azizi_deposit_calculator]'); ?>
     </div>
 </div>
 

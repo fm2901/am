@@ -1,0 +1,142 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Deposit Products\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-16 23:00+0500\n"
+"PO-Revision-Date: 2025-12-16 23:00+0500\n"
+"Last-Translator: \n"
+"Language-Team: Tajik\n"
+"Language: tj_TJ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0\n"
+
+#: deposit-products.php:39
+msgid "Депозиты"
+msgstr "Амонатҳо"
+
+#: deposit-products.php:40
+msgid "Депозит"
+msgstr "Амонат"
+
+#: deposit-products.php:42
+msgid "Добавить новый"
+msgstr "Илова кардан"
+
+#: deposit-products.php:43
+msgid "Добавить новый депозит"
+msgstr "Амонати нав илова кардан"
+
+#: deposit-products.php:44
+msgid "Редактировать депозит"
+msgstr "Таҳрир кардани амонат"
+
+#: deposit-products.php:45
+msgid "Новый депозит"
+msgstr "Амонати нав"
+
+#: deposit-products.php:46
+msgid "Просмотр депозита"
+msgstr "Дидани амонат"
+
+#: deposit-products.php:47
+msgid "Искать депозит"
+msgstr "Ҷустуҷӯи амонат"
+
+#: deposit-products.php:48
+msgid "Депозитов не найдено"
+msgstr "Амонат ёфт нашуд"
+
+#: deposit-products.php:49
+msgid "В корзине депозитов не найдено"
+msgstr "Дар сабад амонат ёфт нашуд"
+
+#: deposit-products.php:74
+msgid "Параметры депозита"
+msgstr "Параметрҳои амонат"
+
+#: deposit-products.php:108
+msgid "Процент в сомони (до X%)"
+msgstr "Фоиз бо сомонӣ (то X%)"
+
+#: deposit-products.php:113
+msgid "Процент в долларах (до X%)"
+msgstr "Фоиз бо доллар (то X%)"
+
+#: deposit-products.php:118
+msgid "Срок (например: 1 год, 6 месяцев)"
+msgstr "Муҳлат (масалан: 1 сол, 6 моҳ)"
+
+#: deposit-products.php:123
+msgid "Минимальная сумма (число)"
+msgstr "Маблағи ҳадди ақал (рақам)"
+
+#: deposit-products.php:128
+msgid "Валюта минимальной суммы"
+msgstr "Асъори маблағи ҳадди ақал"
+
+#: deposit-products.php:130
+msgid "Сомони"
+msgstr "Сомонӣ"
+
+#: deposit-products.php:131
+msgid "Долларов"
+msgstr "Доллар"
+
+#: deposit-products.php:136
+msgid "URL формы заявки (необязательно)"
+msgstr "URL шакли дархост (ихтиёрӣ)"
+
+#: deposit-products.php:138
+msgid "Оставьте пустым для использования #deposit-form по умолчанию"
+msgstr "Барои истифодаи #deposit-form холӣ гузоред"
+
+#: deposit-products.php:197
+msgid "с."
+msgstr "с."
+
+#: deposit-products.php:197
+msgid "$"
+msgstr "$"
+
+#: deposit-products.php:218
+msgid "Даромад бо сом."
+msgstr "Даромад бо сом."
+
+#: deposit-products.php:219 deposit-products.php:226
+msgid "то"
+msgstr "то"
+
+#: deposit-products.php:225
+msgid "Даромад бо долл."
+msgstr "Даромад бо долл."
+
+#: deposit-products.php:232
+msgid "Муҳлат"
+msgstr "Муҳлат"
+
+#: deposit-products.php:239
+msgid "Маблағ"
+msgstr "Маблағ"
+
+#: deposit-products.php:240
+msgid "аз"
+msgstr "аз"
+
+#: deposit-products.php:248
+msgid "Амонат гузоштан"
+msgstr "Амонат гузоштан"
+
+#: deposit-products.php:252
+msgid "Бештар"
+msgstr "Бештар"
+
+#: deposit-products.php:252
+msgid "Маълумоти бештар"
+msgstr "Маълумоти бештар"
+
+#: templates/single-deposit.php:31
+msgid "Ҳамаи амонатҳо"
+msgstr "Ҳамаи амонатҳо"

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 // Базовая настройка темы
 add_action( 'after_setup_theme', function() {
     add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails', ['post','page','azp_product', 'credit_product']);
+    add_theme_support( 'post-thumbnails', ['post','page','azp_product', 'credit_product', 'deposit']);
     add_theme_support( 'html5', [ 'search-form','comment-form','comment-list','gallery','caption','style','script' ] );
     load_theme_textdomain( 'azizi-main', get_template_directory() . '/languages' );
 });

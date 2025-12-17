@@ -85,32 +85,38 @@
     // === ДОРАБОТКА: модалка для лида ===
     document.addEventListener("DOMContentLoaded", function () {
         const modal = document.getElementById("deposit-modal");
-        const openBtn = document.getElementById("open-deposit-modal");
-        if(!modal || !openBtn) return;
+        if(!modal) return;
 
         const closeBtn = modal.querySelector(".cc-modal-close");
         const leadForm = document.getElementById("deposit-lead-form");
 
-        // открыть и подставить сумму + срок
-        openBtn.addEventListener("click", () => {
-            const amountField = document.querySelector(".js-dep-amount");
-            const termField = document.querySelector(".js-dep-term");
+        // Обработчик для всех кнопок с классом open-deposit-modal
+        function attachModalHandlers() {
+            const openBtns = document.querySelectorAll(".open-deposit-modal, #open-deposit-modal");
+            openBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const amountField = document.querySelector(".js-dep-amount");
+                    const termField = document.querySelector(".js-dep-term");
 
-            const amount = amountField ? amountField.value : "";
-            const term = termField ? termField.value : "";
+                    const amount = amountField ? amountField.value : "";
+                    const term = termField ? termField.value : "";
 
-            // hidden для отправки
-            document.getElementById("lead-deposit-amount").value = amount;
-            document.getElementById("lead-deposit-term").value = term;
+                    // hidden для отправки
+                    document.getElementById("lead-deposit-amount").value = amount;
+                    document.getElementById("lead-deposit-term").value = term;
 
-            // отображение пользователю
-            const amountDisplay = document.getElementById("lead-deposit-amount-display");
-            const termDisplay = document.getElementById("lead-deposit-term-display");
-            if(amountDisplay) amountDisplay.value = amount;
-            if(termDisplay) termDisplay.value = term;
+                    // отображение пользователю
+                    const amountDisplay = document.getElementById("lead-deposit-amount-display");
+                    const termDisplay = document.getElementById("lead-deposit-term-display");
+                    if(amountDisplay) amountDisplay.value = amount;
+                    if(termDisplay) termDisplay.value = term;
 
-            modal.style.display = "flex";
-        });
+                    modal.style.display = "flex";
+                });
+            });
+        }
+
+        attachModalHandlers();
 
         // закрыть крестиком
         closeBtn.addEventListener("click", () => {

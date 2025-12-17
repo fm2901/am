@@ -62,7 +62,7 @@ class Deposit_Products {
             'hierarchical'        => false,
             'menu_position'       => 5,
             'menu_icon'           => 'dashicons-money-alt',
-            'supports'            => ['title', 'editor', 'thumbnail'],
+            'supports'            => ['title', 'thumbnail'],
         ];
 
         register_post_type('deposit', $args);
@@ -185,63 +185,74 @@ class Deposit_Products {
 
         ob_start();
         ?>
-        <div class="deposit-products-grid">
+        <div class="dp-deposit-products">
             <?php while ($query->have_posts()) : $query->the_post();
                 $rate_somoni = get_post_meta(get_the_ID(), '_deposit_rate_somoni', true);
                 $rate_dollar = get_post_meta(get_the_ID(), '_deposit_rate_dollar', true);
                 $period = get_post_meta(get_the_ID(), '_deposit_period', true);
                 $min_amount = get_post_meta(get_the_ID(), '_deposit_min_amount', true);
                 $currency = get_post_meta(get_the_ID(), '_deposit_currency', true) ?: 'somoni';
-                $form_url = get_post_meta(get_the_ID(), '_deposit_form_url', true) ?: '#deposit-form';
 
                 $currency_label = $currency === 'somoni' ? __('с.', 'deposit-products') : __('$', 'deposit-products');
             ?>
-            <div class="deposit-card">
-                <?php if (has_post_thumbnail()) : ?>
-                    <div class="deposit-card-logo">
-                        <?php the_post_thumbnail('medium'); ?>
-                    </div>
-                <?php endif; ?>
+            <div class="deposit-card-horizontal">
 
-                <h3 class="deposit-card-title"><?php the_title(); ?></h3>
-
-                <div class="deposit-card-info">
-                    <?php if ($rate_somoni) : ?>
-                    <div class="deposit-info-item">
-                        <div class="deposit-info-label"><?php _e('Даромад бо сом.', 'deposit-products'); ?></div>
-                        <div class="deposit-info-value"><?php _e('то', 'deposit-products'); ?> <?php echo esc_html($rate_somoni); ?>%</div>
-                    </div>
-                    <?php endif; ?>
-
-                    <?php if ($rate_dollar) : ?>
-                    <div class="deposit-info-item">
-                        <div class="deposit-info-label"><?php _e('Даромад бо долл.', 'deposit-products'); ?></div>
-                        <div class="deposit-info-value"><?php _e('то', 'deposit-products'); ?> <?php echo esc_html($rate_dollar); ?>%</div>
-                    </div>
-                    <?php endif; ?>
-
-                    <?php if ($period) : ?>
-                    <div class="deposit-info-item">
-                        <div class="deposit-info-label"><?php _e('Муҳлат', 'deposit-products'); ?></div>
-                        <div class="deposit-info-value"><?php echo esc_html($period); ?></div>
-                    </div>
-                    <?php endif; ?>
-
-                    <?php if ($min_amount) : ?>
-                    <div class="deposit-info-item">
-                        <div class="deposit-info-label"><?php _e('Маблағ', 'deposit-products'); ?></div>
-                        <div class="deposit-info-value"><?php _e('аз', 'deposit-products'); ?> <?php echo esc_html($min_amount); ?> <?php echo esc_html($currency_label); ?></div>
-                    </div>
+                <!-- IMAGE -->
+                <div class="deposit-card-horizontal__image">
+                    <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail('large'); ?>
                     <?php endif; ?>
                 </div>
 
-                <div class="deposit-card-actions">
-                    <a href="<?php echo esc_url($form_url); ?>" class="deposit-btn deposit-btn-primary">
-                        <?php _e('Амонат гузоштан', 'deposit-products'); ?>
-                    </a>
-                    <a href="<?php the_permalink(); ?>" class="deposit-btn deposit-btn-secondary">
-                        <?php _e('Бештар', 'deposit-products'); ?>
-                    </a>
+                <!-- CONTENT -->
+                <div class="deposit-card-horizontal__content">
+
+                    <h3 class="deposit-card-horizontal__title">
+                        «<?php the_title(); ?>»
+                    </h3>
+
+                    <div class="deposit-card-horizontal__params">
+
+                        <?php if ($rate_somoni) : ?>
+                        <div class="param">
+                            <span><?php _e('Даромад бо сом.', 'deposit-products'); ?></span>
+                            <strong><?php _e('то', 'deposit-products'); ?> <?php echo esc_html($rate_somoni); ?>%</strong>
+                        </div>
+                        <?php endif; ?>
+
+                        <?php if ($rate_dollar) : ?>
+                        <div class="param">
+                            <span><?php _e('Даромад бо долл.', 'deposit-products'); ?></span>
+                            <strong><?php _e('то', 'deposit-products'); ?> <?php echo esc_html($rate_dollar); ?>%</strong>
+                        </div>
+                        <?php endif; ?>
+
+                        <?php if ($period) : ?>
+                        <div class="param">
+                            <span><?php _e('Муҳлат', 'deposit-products'); ?></span>
+                            <strong><?php echo esc_html($period); ?></strong>
+                        </div>
+                        <?php endif; ?>
+
+                        <?php if ($min_amount) : ?>
+                        <div class="param">
+                            <span><?php _e('Маблағ', 'deposit-products'); ?></span>
+                            <strong><?php _e('аз', 'deposit-products'); ?> <?php echo esc_html($min_amount); ?> <?php echo esc_html($currency_label); ?></strong>
+                        </div>
+                        <?php endif; ?>
+
+                    </div>
+
+                    <div class="deposit-card-horizontal__actions">
+                        <button class="btn-primary open-deposit-modal">
+                            <?php _e('Амонат гузоштан', 'deposit-products'); ?>
+                        </button>
+
+                        <a href="<?php the_permalink(); ?>" class="deposit-card-horizontal__more">
+                            <?php _e('Маълумоти бештар', 'deposit-products'); ?>
+                        </a>
+                    </div>
+
                 </div>
             </div>
             <?php endwhile; ?>

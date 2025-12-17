@@ -1,0 +1,142 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Deposit Products\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-16 23:00+0500\n"
+"PO-Revision-Date: 2025-12-16 23:00+0500\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0\n"
+
+#: deposit-products.php:39
+msgid "Депозиты"
+msgstr "Deposits"
+
+#: deposit-products.php:40
+msgid "Депозит"
+msgstr "Deposit"
+
+#: deposit-products.php:42
+msgid "Добавить новый"
+msgstr "Add New"
+
+#: deposit-products.php:43
+msgid "Добавить новый депозит"
+msgstr "Add New Deposit"
+
+#: deposit-products.php:44
+msgid "Редактировать депозит"
+msgstr "Edit Deposit"
+
+#: deposit-products.php:45
+msgid "Новый депозит"
+msgstr "New Deposit"
+
+#: deposit-products.php:46
+msgid "Просмотр депозита"
+msgstr "View Deposit"
+
+#: deposit-products.php:47
+msgid "Искать депозит"
+msgstr "Search Deposit"
+
+#: deposit-products.php:48
+msgid "Депозитов не найдено"
+msgstr "No Deposits Found"
+
+#: deposit-products.php:49
+msgid "В корзине депозитов не найдено"
+msgstr "No Deposits Found in Trash"
+
+#: deposit-products.php:74
+msgid "Параметры депозита"
+msgstr "Deposit Parameters"
+
+#: deposit-products.php:108
+msgid "Процент в сомони (до X%)"
+msgstr "Interest Rate in Somoni (up to X%)"
+
+#: deposit-products.php:113
+msgid "Процент в долларах (до X%)"
+msgstr "Interest Rate in Dollars (up to X%)"
+
+#: deposit-products.php:118
+msgid "Срок (например: 1 год, 6 месяцев)"
+msgstr "Term (e.g.: 1 year, 6 months)"
+
+#: deposit-products.php:123
+msgid "Минимальная сумма (число)"
+msgstr "Minimum Amount (number)"
+
+#: deposit-products.php:128
+msgid "Валюта минимальной суммы"
+msgstr "Minimum Amount Currency"
+
+#: deposit-products.php:130
+msgid "Сомони"
+msgstr "Somoni"
+
+#: deposit-products.php:131
+msgid "Долларов"
+msgstr "Dollars"
+
+#: deposit-products.php:136
+msgid "URL формы заявки (необязательно)"
+msgstr "Application Form URL (optional)"
+
+#: deposit-products.php:138
+msgid "Оставьте пустым для использования #deposit-form по умолчанию"
+msgstr "Leave blank to use #deposit-form by default"
+
+#: deposit-products.php:197
+msgid "с."
+msgstr "s."
+
+#: deposit-products.php:197
+msgid "$"
+msgstr "$"
+
+#: deposit-products.php:218
+msgid "Даромад бо сом."
+msgstr "Income in Somoni"
+
+#: deposit-products.php:219 deposit-products.php:226
+msgid "то"
+msgstr "up to"
+
+#: deposit-products.php:225
+msgid "Даромад бо долл."
+msgstr "Income in Dollars"
+
+#: deposit-products.php:232
+msgid "Муҳлат"
+msgstr "Term"
+
+#: deposit-products.php:239
+msgid "Маблағ"
+msgstr "Amount"
+
+#: deposit-products.php:240
+msgid "аз"
+msgstr "from"
+
+#: deposit-products.php:248
+msgid "Амонат гузоштан"
+msgstr "Open Deposit"
+
+#: deposit-products.php:252
+msgid "Бештар"
+msgstr "More"
+
+#: deposit-products.php:252
+msgid "Маълумоти бештар"
+msgstr "More Information"
+
+#: templates/single-deposit.php:31
+msgid "Ҳамаи амонатҳо"
+msgstr "All Deposits"

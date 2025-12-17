@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"D:\\apps\\am\\wp-content\\plugins\"\" | grep -E \"credit)",
+      "Bash(deposit)",
+      "Bash(loan)",
+      "Bash(product \")",
+      "Bash(msgfmt:*)"
+    ]
+  }
+}
