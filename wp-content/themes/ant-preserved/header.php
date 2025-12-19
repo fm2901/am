@@ -14,6 +14,7 @@
 <link crossorigin="" href="<?php echo get_template_directory_uri(); ?>/assets/index-BNcxx9oT.css" rel="stylesheet"/>
 <link crossorigin="" href="<?php echo get_template_directory_uri(); ?>/assets/main.css" rel="stylesheet"/>
 <link href="<?php echo get_template_directory_uri(); ?>/assets/inline-01.css" rel="stylesheet"/>
+<script src="//code.jivosite.com/widget/PlTospArMT" async></script>
 <?php wp_head(); ?></head>
 <?php wp_head(); ?>
 <body <?php body_class(); ?>>
