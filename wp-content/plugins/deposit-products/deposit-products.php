@@ -193,7 +193,7 @@ class Deposit_Products {
                 $min_amount = get_post_meta(get_the_ID(), '_deposit_min_amount', true);
                 $currency = get_post_meta(get_the_ID(), '_deposit_currency', true) ?: 'somoni';
 
-                $currency_label = $currency === 'somoni' ? __('с.', 'deposit-products') : __('$', 'deposit-products');
+                $currency_label = $currency === 'somoni' ? __('сом.', 'deposit-products') : __('$', 'deposit-products');
             ?>
             <div class="deposit-card-horizontal">
 
@@ -215,29 +215,29 @@ class Deposit_Products {
 
                         <?php if ($rate_somoni) : ?>
                         <div class="param">
-                            <span><?php _e('Даромад бо сом.', 'deposit-products'); ?></span>
-                            <strong><?php _e('то', 'deposit-products'); ?> <?php echo esc_html($rate_somoni); ?>%</strong>
+                            <span><?php _e('Доход в сомони', 'deposit-products'); ?></span>
+                            <strong><?php _e('до', 'deposit-products'); ?> <?php echo esc_html($rate_somoni); ?>%</strong>
                         </div>
                         <?php endif; ?>
 
                         <?php if ($rate_dollar) : ?>
                         <div class="param">
-                            <span><?php _e('Даромад бо долл.', 'deposit-products'); ?></span>
-                            <strong><?php _e('то', 'deposit-products'); ?> <?php echo esc_html($rate_dollar); ?>%</strong>
+                            <span><?php _e('Доход в долларах', 'deposit-products'); ?></span>
+                            <strong><?php _e('до', 'deposit-products'); ?> <?php echo esc_html($rate_dollar); ?>%</strong>
                         </div>
                         <?php endif; ?>
 
                         <?php if ($period) : ?>
                         <div class="param">
-                            <span><?php _e('Муҳлат', 'deposit-products'); ?></span>
+                            <span><?php _e('Срок', 'deposit-products'); ?></span>
                             <strong><?php echo esc_html($period); ?></strong>
                         </div>
                         <?php endif; ?>
 
                         <?php if ($min_amount) : ?>
                         <div class="param">
-                            <span><?php _e('Маблағ', 'deposit-products'); ?></span>
-                            <strong><?php _e('аз', 'deposit-products'); ?> <?php echo esc_html($min_amount); ?> <?php echo esc_html($currency_label); ?></strong>
+                            <span><?php _e('Сумма', 'deposit-products'); ?></span>
+                            <strong><?php _e('от', 'deposit-products'); ?> <?php echo esc_html($min_amount); ?> <?php echo esc_html($currency_label); ?></strong>
                         </div>
                         <?php endif; ?>
 
@@ -245,11 +245,11 @@ class Deposit_Products {
 
                     <div class="deposit-card-horizontal__actions">
                         <button class="btn-primary open-deposit-modal">
-                            <?php _e('Амонат гузоштан', 'deposit-products'); ?>
+                            <?php _e('Открыть вклад', 'deposit-products'); ?>
                         </button>
 
                         <a href="<?php the_permalink(); ?>" class="deposit-card-horizontal__more">
-                            <?php _e('Маълумоти бештар', 'deposit-products'); ?>
+                            <?php _e('Подробнее', 'deposit-products'); ?>
                         </a>
                     </div>
 

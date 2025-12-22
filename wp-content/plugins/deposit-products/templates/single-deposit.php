@@ -11,7 +11,7 @@ $period = get_post_meta(get_the_ID(), '_deposit_period', true);
 $min_amount = get_post_meta(get_the_ID(), '_deposit_min_amount', true);
 $currency = get_post_meta(get_the_ID(), '_deposit_currency', true) ?: 'somoni';
 
-$currency_label = $currency === 'somoni' ? __('с.', 'deposit-products') : __('$', 'deposit-products');
+$currency_label = $currency === 'somoni' ? __('сом.', 'deposit-products') : __('$', 'deposit-products');
 
 // Получаем URL страницы депозитов для хлебных крошек
 $deposits_page_url = function_exists('pll_get_post') ? get_permalink(pll_get_post(get_option('page_for_deposits'))) : '#';
@@ -28,7 +28,7 @@ if (!$deposits_page_url || $deposits_page_url === '#') {
     <!-- Хлебные крошки -->
     <nav class="deposit-breadcrumbs" style="max-width: 1200px; margin: 20px auto; padding: 0 20px;">
         <a href="<?php echo esc_url($deposits_page_url); ?>" style="color: #1c3553; text-decoration: none;">
-            ← <?php _e('Ҳамаи амонатҳо', 'deposit-products'); ?>
+            ← <?php _e('Все депозиты', 'deposit-products'); ?>
         </a>
     </nav>
 
@@ -46,35 +46,35 @@ if (!$deposits_page_url || $deposits_page_url === '#') {
             <div class="deposit-banner-info">
                 <?php if ($rate_somoni) : ?>
                     <div class="deposit-banner-item">
-                        <span class="deposit-banner-label"><?php _e('Даромад бо сом.', 'deposit-products'); ?></span>
-                        <span class="deposit-banner-value"><?php _e('то', 'deposit-products'); ?> <?php echo esc_html($rate_somoni); ?>%</span>
+                        <span class="deposit-banner-label"><?php _e('Доход в сомони', 'deposit-products'); ?></span>
+                        <span class="deposit-banner-value"><?php _e('до', 'deposit-products'); ?> <?php echo esc_html($rate_somoni); ?>%</span>
                     </div>
                 <?php endif; ?>
 
                 <?php if ($rate_dollar) : ?>
                     <div class="deposit-banner-item">
-                        <span class="deposit-banner-label"><?php _e('Даромад бо долл.', 'deposit-products'); ?></span>
-                        <span class="deposit-banner-value"><?php _e('то', 'deposit-products'); ?> <?php echo esc_html($rate_dollar); ?>%</span>
+                        <span class="deposit-banner-label"><?php _e('Доход в долларах', 'deposit-products'); ?></span>
+                        <span class="deposit-banner-value"><?php _e('до', 'deposit-products'); ?> <?php echo esc_html($rate_dollar); ?>%</span>
                     </div>
                 <?php endif; ?>
 
                 <?php if ($period) : ?>
                     <div class="deposit-banner-item">
-                        <span class="deposit-banner-label"><?php _e('Муҳлат', 'deposit-products'); ?></span>
+                        <span class="deposit-banner-label"><?php _e('Срок', 'deposit-products'); ?></span>
                         <span class="deposit-banner-value"><?php echo esc_html($period); ?></span>
                     </div>
                 <?php endif; ?>
 
                 <?php if ($min_amount) : ?>
                     <div class="deposit-banner-item">
-                        <span class="deposit-banner-label"><?php _e('Маблағ', 'deposit-products'); ?></span>
-                        <span class="deposit-banner-value"><?php _e('аз', 'deposit-products'); ?> <?php echo esc_html($min_amount); ?> <?php echo esc_html($currency_label); ?></span>
+                        <span class="deposit-banner-label"><?php _e('Сумма', 'deposit-products'); ?></span>
+                        <span class="deposit-banner-value"><?php _e('от', 'deposit-products'); ?> <?php echo esc_html($min_amount); ?> <?php echo esc_html($currency_label); ?></span>
                     </div>
                 <?php endif; ?>
             </div>
 
             <button class="deposit-banner-btn open-deposit-modal">
-                <?php _e('Амонат гузоштан', 'deposit-products'); ?>
+                <?php _e('Открыть вклад', 'deposit-products'); ?>
             </button>
         </div>
     </div>

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Deposit Products\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-16 23:00+0500\n"
-"PO-Revision-Date: 2025-12-16 23:00+0500\n"
+"POT-Creation-Date: 2025-12-22 12:00+0500\n"
+"PO-Revision-Date: 2025-12-22 12:00+0500\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -93,50 +93,46 @@ msgstr "URL формы заявки (необязательно)"
 msgid "Оставьте пустым для использования #deposit-form по умолчанию"
 msgstr "Оставьте пустым для использования #deposit-form по умолчанию"
 
-#: deposit-products.php:197
-msgid "с."
-msgstr "с."
+#: deposit-products.php:196 templates/single-deposit.php:14
+msgid "сом."
+msgstr "сом."
 
-#: deposit-products.php:197
+#: deposit-products.php:196 templates/single-deposit.php:14
 msgid "$"
 msgstr "$"
 
-#: deposit-products.php:218
-msgid "Даромад бо сом."
+#: deposit-products.php:218 templates/single-deposit.php:49
+msgid "Доход в сомони"
 msgstr "Доход в сомони"
 
-#: deposit-products.php:219 deposit-products.php:226
-msgid "то"
+#: deposit-products.php:219 deposit-products.php:226 templates/single-deposit.php:50 templates/single-deposit.php:57
+msgid "до"
 msgstr "до"
 
-#: deposit-products.php:225
-msgid "Даромад бо долл."
+#: deposit-products.php:225 templates/single-deposit.php:56
+msgid "Доход в долларах"
 msgstr "Доход в долларах"
 
-#: deposit-products.php:232
-msgid "Муҳлат"
+#: deposit-products.php:232 templates/single-deposit.php:63
+msgid "Срок"
 msgstr "Срок"
 
-#: deposit-products.php:239
-msgid "Маблағ"
+#: deposit-products.php:239 templates/single-deposit.php:70
+msgid "Сумма"
 msgstr "Сумма"
 
-#: deposit-products.php:240
-msgid "аз"
+#: deposit-products.php:240 templates/single-deposit.php:71
+msgid "от"
 msgstr "от"
 
-#: deposit-products.php:248
-msgid "Амонат гузоштан"
+#: deposit-products.php:248 templates/single-deposit.php:77
+msgid "Открыть вклад"
 msgstr "Открыть вклад"
 
 #: deposit-products.php:252
-msgid "Бештар"
-msgstr "Подробнее"
-
-#: deposit-products.php:252
-msgid "Маълумоти бештар"
+msgid "Подробнее"
 msgstr "Подробнее"
 
 #: templates/single-deposit.php:31
-msgid "Ҳамаи амонатҳо"
+msgid "Все депозиты"
 msgstr "Все депозиты"
