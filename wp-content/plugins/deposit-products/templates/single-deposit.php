@@ -30,44 +30,68 @@ if ($deposits_page_id) {
     }
 }
 
-// Метод 2: Если URL не найден, пробуем найти страницу с шаблоном deposit.php
+// Метод 2: Ищем страницу с шорткодом [deposit_products]
 if (!$deposits_page_url || $deposits_page_url === '#') {
     $args = array(
         'post_type' => 'page',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        's' => '[deposit_products]', // Ищем по содержанию шорткода
+    );
+
+    $all_pages = get_posts($args);
+
+    // Если ничего не найдено по поиску, попробуем проверить все страницы
+    if (empty($all_pages)) {
+        $args = array(
+            'post_type' => 'page',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+        );
+        $all_pages = get_posts($args);
+    }
+
+    // Ищем страницу с шорткодом [deposit_products] в контенте
+    foreach ($all_pages as $page) {
+        if (has_shortcode($page->post_content, 'deposit_products')) {
+            // Нашли страницу! Теперь получаем её перевод на текущий язык
+            if (function_exists('pll_get_post') && function_exists('pll_current_language')) {
+                $current_lang = pll_current_language();
+                $translated_page_id = pll_get_post($page->ID, $current_lang);
+                if ($translated_page_id) {
+                    $deposits_page_url = get_permalink($translated_page_id);
+                    break;
+                }
+            } else {
+                $deposits_page_url = get_permalink($page->ID);
+                break;
+            }
+        }
+    }
+}
+
+// Метод 3: Ищем по шаблону страницы
+if (!$deposits_page_url || $deposits_page_url === '#') {
+    $args = array(
+        'post_type' => 'page',
+        'post_status' => 'publish',
         'meta_key' => '_wp_page_template',
         'meta_value' => 'deposit.php',
         'posts_per_page' => 1,
     );
 
-    // Если используется Polylang, добавляем фильтр по текущему языку
-    if (function_exists('pll_current_language')) {
-        $args['lang'] = pll_current_language();
-    }
-
     $pages = get_posts($args);
     if (!empty($pages)) {
-        $deposits_page_url = get_permalink($pages[0]->ID);
-    }
-}
-
-// Метод 3: Если все еще не найдено, пробуем найти страницу по slug
-if (!$deposits_page_url || $deposits_page_url === '#') {
-    $page_slug = 'deposits'; // или 'amоnаtho' для таджикского
-
-    // Для Polylang пытаемся найти страницу по slug в текущем языке
-    if (function_exists('pll_current_language')) {
-        $current_lang = pll_current_language();
-        $slugs = array(
-            'ru' => 'deposits',
-            'en' => 'deposits',
-            'tj' => 'amonatho',
-        );
-        $page_slug = isset($slugs[$current_lang]) ? $slugs[$current_lang] : 'deposits';
-    }
-
-    $page = get_page_by_path($page_slug);
-    if ($page) {
-        $deposits_page_url = get_permalink($page->ID);
+        // Получаем перевод страницы на текущий язык
+        if (function_exists('pll_get_post') && function_exists('pll_current_language')) {
+            $current_lang = pll_current_language();
+            $translated_page_id = pll_get_post($pages[0]->ID, $current_lang);
+            if ($translated_page_id) {
+                $deposits_page_url = get_permalink($translated_page_id);
+            }
+        } else {
+            $deposits_page_url = get_permalink($pages[0]->ID);
+        }
     }
 }
 ?>
