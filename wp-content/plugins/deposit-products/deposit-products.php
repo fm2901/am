@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Deposit Products
  * Plugin URI: https://example.com
- * Description: Мультиязычный плагин для управления депозитными продуктами
- * Version: 1.0.0
+ * Description: Мультиязычный плагин для управления депозитными продуктами с полной интеграцией Polylang
+ * Version: 1.0.1
  * Author: Your Name
  * Text Domain: deposit-products
  * Domain Path: /languages
@@ -28,6 +28,11 @@ class Deposit_Products {
 
         // Интеграция с Polylang
         add_filter('pll_get_post_types', [$this, 'add_polylang_support']);
+        add_filter('pll_copy_post_metas', [$this, 'polylang_copy_metas'], 10, 2);
+        add_action('pll_save_post', [$this, 'polylang_sync_metas'], 10, 3);
+
+        // Синхронизация миниатюр между переводами
+        add_action('pll_translate_media', [$this, 'polylang_translate_media'], 10, 3);
     }
 
     public function load_textdomain() {
@@ -177,6 +182,11 @@ class Deposit_Products {
             'post_status' => 'publish',
         ];
 
+        // Фильтрация по текущему языку Polylang
+        if (function_exists('pll_current_language')) {
+            $args['lang'] = pll_current_language();
+        }
+
         $query = new WP_Query($args);
 
         if (!$query->have_posts()) {
@@ -278,6 +288,84 @@ class Deposit_Products {
     public function add_polylang_support($post_types) {
         $post_types['deposit'] = 'deposit';
         return $post_types;
+    }
+
+    /**
+     * Копирование мета-полей при создании перевода
+     */
+    public function polylang_copy_metas($metas, $sync) {
+        // Список мета-полей для копирования
+        $deposit_metas = [
+            '_deposit_rate_somoni',
+            '_deposit_rate_dollar',
+            '_deposit_period',
+            '_deposit_min_amount',
+            '_deposit_currency',
+            '_deposit_form_url',
+        ];
+
+        return array_merge($metas, $deposit_metas);
+    }
+
+    /**
+     * Синхронизация мета-полей между переводами
+     */
+    public function polylang_sync_metas($post_id, $post, $translations) {
+        // Проверяем, что это наш тип записи
+        if ($post->post_type !== 'deposit') {
+            return;
+        }
+
+        // Список мета-полей для синхронизации
+        $deposit_metas = [
+            '_deposit_rate_somoni',
+            '_deposit_rate_dollar',
+            '_deposit_period',
+            '_deposit_min_amount',
+            '_deposit_currency',
+            '_deposit_form_url',
+        ];
+
+        // Получаем миниатюру текущего поста
+        $thumbnail_id = get_post_thumbnail_id($post_id);
+
+        // Синхронизируем мета-поля и миниатюру со всеми переводами
+        foreach ($translations as $lang => $translation_id) {
+            if ($translation_id && $translation_id !== $post_id) {
+                // Синхронизация мета-полей
+                foreach ($deposit_metas as $meta_key) {
+                    $meta_value = get_post_meta($post_id, $meta_key, true);
+                    update_post_meta($translation_id, $meta_key, $meta_value);
+                }
+
+                // Синхронизация миниатюры
+                if ($thumbnail_id) {
+                    // Если используется перевод медиафайла в Polylang
+                    if (function_exists('pll_get_post')) {
+                        $translated_thumbnail = pll_get_post($thumbnail_id, $lang);
+                        if ($translated_thumbnail) {
+                            set_post_thumbnail($translation_id, $translated_thumbnail);
+                        } else {
+                            // Если перевода нет, используем оригинальную миниатюру
+                            set_post_thumbnail($translation_id, $thumbnail_id);
+                        }
+                    } else {
+                        set_post_thumbnail($translation_id, $thumbnail_id);
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Обработка переводов медиафайлов
+     */
+    public function polylang_translate_media($post_id, $tr_id, $lang) {
+        // Копируем миниатюру при создании перевода
+        $thumbnail_id = get_post_thumbnail_id($post_id);
+        if ($thumbnail_id) {
+            set_post_thumbnail($tr_id, $thumbnail_id);
+        }
     }
 }
 

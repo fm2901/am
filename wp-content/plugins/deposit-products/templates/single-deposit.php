@@ -14,12 +14,60 @@ $currency = get_post_meta(get_the_ID(), '_deposit_currency', true) ?: 'somoni';
 $currency_label = $currency === 'somoni' ? __('сом.', 'deposit-products') : __('$', 'deposit-products');
 
 // Получаем URL страницы депозитов для хлебных крошек
-$deposits_page_url = function_exists('pll_get_post') ? get_permalink(pll_get_post(get_option('page_for_deposits'))) : '#';
+$deposits_page_url = '#';
+
+// Метод 1: Проверяем опцию сайта для ID страницы депозитов
+$deposits_page_id = get_option('page_for_deposits');
+if ($deposits_page_id) {
+    // Если используется Polylang, получаем перевод страницы
+    if (function_exists('pll_get_post')) {
+        $translated_page_id = pll_get_post($deposits_page_id);
+        if ($translated_page_id) {
+            $deposits_page_url = get_permalink($translated_page_id);
+        }
+    } else {
+        $deposits_page_url = get_permalink($deposits_page_id);
+    }
+}
+
+// Метод 2: Если URL не найден, пробуем найти страницу с шаблоном deposit.php
 if (!$deposits_page_url || $deposits_page_url === '#') {
-    // Пробуем найти страницу с шаблоном Депозиты
-    $pages = get_pages(array('meta_key' => '_wp_page_template', 'meta_value' => 'deposit.php'));
+    $args = array(
+        'post_type' => 'page',
+        'meta_key' => '_wp_page_template',
+        'meta_value' => 'deposit.php',
+        'posts_per_page' => 1,
+    );
+
+    // Если используется Polylang, добавляем фильтр по текущему языку
+    if (function_exists('pll_current_language')) {
+        $args['lang'] = pll_current_language();
+    }
+
+    $pages = get_posts($args);
     if (!empty($pages)) {
         $deposits_page_url = get_permalink($pages[0]->ID);
+    }
+}
+
+// Метод 3: Если все еще не найдено, пробуем найти страницу по slug
+if (!$deposits_page_url || $deposits_page_url === '#') {
+    $page_slug = 'deposits'; // или 'amоnаtho' для таджикского
+
+    // Для Polylang пытаемся найти страницу по slug в текущем языке
+    if (function_exists('pll_current_language')) {
+        $current_lang = pll_current_language();
+        $slugs = array(
+            'ru' => 'deposits',
+            'en' => 'deposits',
+            'tj' => 'amonatho',
+        );
+        $page_slug = isset($slugs[$current_lang]) ? $slugs[$current_lang] : 'deposits';
+    }
+
+    $page = get_page_by_path($page_slug);
+    if ($page) {
+        $deposits_page_url = get_permalink($page->ID);
     }
 }
 ?>
